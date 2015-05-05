@@ -6,9 +6,10 @@ import string
 
 
 class Generator:
-    def __init__(self, num_of_samples):
+    def __init__(self):
         self.labs = {'lab1': self.gen_samples_lab1, 'lab2': self.gen_samples_lab2, 'lab3': self.gen_samples_lab3}
-        self.num_of_samples = num_of_samples
+        self.num_of_samples = 7
+        self.sample_length = 7
 
     @staticmethod
     def gen_output_lab_1(input_string):
@@ -22,21 +23,21 @@ class Generator:
     def gen_output_lab_3(num_a, num_b):
         return num_a + num_b
 
-    def gen_samples(self, lab, *args):
+    def gen_samples(self, lab, args):
         return self.labs[lab](*args)
 
-    def gen_samples_lab1(self, sample_length):
+    def gen_samples_lab1(self, dummy=None):
         in_out = {}
         for i in range(self.num_of_samples):
-            random_string = Generator.random_string(sample_length, upper=True, lower=True, digits=True)
+            random_string = Generator.random_string(self.sample_length, upper=True, lower=True, digits=True)
             in_out[random_string] = self.gen_output_lab_1(random_string)
         return in_out
 
-    def gen_samples_lab2(self, sample_length, change_from, change_to):
+    def gen_samples_lab2(self, change_from, change_to):
         in_out = {}
         for i in range(self.num_of_samples):
-            random_string = Generator.random_string(sample_length, upper=True, lower=True, digits=True)
-            in_out[random_string] = self.gen_output_lab_2(random_string, change_from, change_to)
+            random_string = Generator.random_string(self.sample_length, upper=True, lower=True, digits=True)
+            in_out[(random_string, change_from, change_to)] = self.gen_output_lab_2(random_string, change_from, change_to)
         return in_out
 
     def gen_samples_lab3(self, bitness):

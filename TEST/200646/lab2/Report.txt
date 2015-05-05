@@ -1,23 +1,29 @@
-*** 05.05.2015 17:21:11 ***
+*** 05.05.2015 23:16:27 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-clang++ lab2.cpp -o lab2 -std=c++14
+make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 05.05.2015 17:21:14 ***
+*** 05.05.2015 23:16:27 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: 5ifYDm10eR1UBKH
-Spodziewane wyjscie: 5ifYDm10eR1UBKH OK
+Wejscie: SpZmOrechange_fromchange_to
+Spodziewane wyjscie: SpZchange_toOchange_tochange_to OK
 
-Wejscie: ZMvV3nLiK1pJXQ5
-Spodziewane wyjscie: ZMvV3nLiK1pJXQ5 OK
+Wejscie: 38nJJZ8change_fromchange_to
+Spodziewane wyjscie: 38change_toJJZ8 OK
 
-Wejscie: H4tKvvpqpzM3acW
-Spodziewane wyjscie: H4tKvvpqpzM3acW OK
+Wejscie: zDtNpYKchange_fromchange_to
+Spodziewane wyjscie: zDtNpYK OK
 
-Wejscie: kNWPD04BN6Cln4G
-Spodziewane wyjscie: kNWPD04BN6Cln4G OK
+Wejscie: d31sz1hchange_fromchange_to
+Spodziewane wyjscie: d31sz1change_to OK
 
-Wejscie: VoC8d0VTvLB8GlQ
-Spodziewane wyjscie: VoC8d0VTvLB8GlQ OK
+Wejscie: pLfmVMHchange_fromchange_to
+Spodziewane wyjscie: pLchange_tochange_toVMH OK
+
+Wejscie: kHrH5agchange_fromchange_to
+Spodziewane wyjscie: kHchange_toH5change_tochange_to OK
+
+Wejscie: heBaUcJchange_fromchange_to
+Spodziewane wyjscie: change_tochange_toBchange_toUchange_toJ OK

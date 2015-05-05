@@ -11,47 +11,34 @@ class Grader:
         self.root_dir = root_dir
         self.cur_dir = root_dir
         self.num_of_samples = 5
-        self.gen = Generator(self.num_of_samples)
-        self.bitness = 512
-        self.tests = self.gen.gen_samples_lab2(sample_length=15, change_from="A", change_to="*")
+        self.sample_length = 15
+        bitness = 512
+        self.change_from = "AEIOUY"
+        self.change_to = "%"
+        self.generator = Generator()
+        self.opt = {"lab1": None, "lab2": {"change_from": self.change_from, "change_to": self.change_to}, "lab3": bitness}
 
     @property
     def info(self):
         info = "Podane drzewo katalogow: " + self.root_dir + "\n"
-        info.join("Laboratoria do ocenienia: " + str([lab for lab in self.labs]))
+        info.join("Laboratoria do ocenienia: " + str(self.labs))
         return info
 
     def launch(self):
-        for directory in os.listdir(self.root_dir):
-            if os.path.isdir(os.path.join(self.root_dir, directory)):
+        for student_dir in os.listdir(self.root_dir):
+            if os.path.isdir(os.path.join(self.root_dir, student_dir)):
                 for lab in self.labs:
-                    self.grade_lab(directory, lab)
+                    self.grade_lab(student_dir, lab)
+        self.cur_dir = self.root_dir
 
-    def grade_lab(self, student, lab):
-        self.cur_dir = os.path.join(self.root_dir, student)
-        build_succeeded = self.build_project(student, lab)
+    def grade_lab(self, student_dir, lab):
+        self.cur_dir = os.path.join(self.root_dir, student_dir, lab)
+        build_succeeded = self.build_project()
         if build_succeeded:
-            with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
-                report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
-                report.write("*** Zaczynam testowanie projektu... *** \n")
-                report.flush()
-                for k, v in self.tests.items():
-                    ret_value = sub.Popen([self.cur_dir+"/lab2", k, "A", "*"], stdout=sub.PIPE)
-                    output = ret_value.stdout.read().decode("utf-8")
-                    ret_value.communicate()
-                    line = "\n\nWejscie: " + k + "\nSpodziewane wyjscie: " + v
-                    if v == output:
-                        report.write(line + " OK")
-                    else:
-                        report.write(line + " BLAD\n")
-                        report.write("Otrzymane wyjscie: " + output)
+            self.test_project(lab)
         return build_succeeded
 
-    def makefile_exists(self, student_dir, lab):
-        return os.path.isfile(os.path.join(self.root_dir, student_dir, lab, "makefile"))
-
-    def build_project(self, student_dir, lab):
-        self.cur_dir = os.path.join(self.root_dir, student_dir, lab)
+    def build_project(self):
         with open(os.path.join(self.cur_dir, "Report.txt"), "w") as report:
             report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Zaczynam budowanie projektu... *** \n")
@@ -61,3 +48,25 @@ class Grader:
         if ret_value.returncode == 0:
             return True
         return False
+
+    def test_project(self, lab):
+        with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
+            report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** Zaczynam testowanie projektu... *** \n")
+            report.flush()
+            tests = self.generator.gen_samples(lab, self.opt[lab])
+            for test_input, output in tests.items():
+                print(test_input)
+                w, i, t = test_input
+                ret_value = sub.Popen([self.cur_dir + "/" + lab, w, i, t], stdout=sub.PIPE)
+                output = ret_value.stdout.read().decode("utf-8")
+                ret_value.communicate()
+                line = "\n\nWejscie: " + w + i + t + "\nSpodziewane wyjscie: " + output
+                if output == output:
+                    report.write(line + " OK")
+                else:
+                    report.write(line + " BLAD\n")
+                    report.write("Otrzymane wyjscie: " + output)
+
+    def makefile_exists(self, student_dir, lab):
+        return os.path.isfile(os.path.join(self.root_dir, student_dir, lab, "makefile"))

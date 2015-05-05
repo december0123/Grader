@@ -1,8 +1,10 @@
+#!/usr/bin/env python3.1
 __author__ = 'dec'
 
 from grader.grader import Grader
 from grader.generator import Generator
 import os
+import re
 import unittest
 
 
@@ -27,11 +29,11 @@ class TestGrader(unittest.TestCase):
         self.assertTrue(self.grader.makefile_exists(good_path, self.lab))
         self.assertFalse(self.grader.makefile_exists(bad_path, self.lab))
 
+    '''
     def test_build_project(self):
-        self.assertTrue(self.grader.build_project(self.good_student_dir, self.lab))
-        self.assertFalse(self.grader.build_project(self.bad_student_dir, self.lab))
+        self.assertTrue(self.grader.grade_lab(self.good_student_dir, self.lab))
+        self.assertFalse(self.grader.grade_lab(self.bad_student_dir, self.lab))
         self.assertRaises(IOError, self.grader.build_project, self.nonexistent_student_dir, self.lab)
-
     '''
     def test_grade_student_lab(self):
         passed = self.grader.grade_lab(self.good_student_dir, self.lab)
@@ -47,22 +49,21 @@ class TestGrader(unittest.TestCase):
             pattern = r"^\*{3} \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}:\d{2} \*{3}$"  # matches "*** dd.mm.yyyy hh:mm:ss ***"
             r = re.compile(pattern)
             self.assertTrue(r.match(line))
-    '''
 
 
 class TestGenerator(unittest.TestCase):
 
     def setUp(self):
-        self.num_of_samples = 5
-        self.sample_length = 10
-        self.g = Generator(num_of_samples=self.num_of_samples)
+        self.num_of_samples = 7
+        self.sample_length = 7
+        self.g = Generator()
 
     def test_lab_1_gen_output_for_given_input(self):
         input_string = "test"
         self.assertEqual(input_string, Generator.gen_output_lab_1(input_string))
 
     def test_lab_1_gen_dict_of_inputs_and_outputs(self):
-        in_out = self.g.gen_samples("lab1", self.sample_length)
+        in_out = self.g.gen_samples("lab1")
         self.assertEqual(len(in_out), self.num_of_samples)
         for k, v in in_out.items():
             self.assertEqual(k, v)
@@ -78,12 +79,12 @@ class TestGenerator(unittest.TestCase):
     def test_lab_2_gen_dict_of_inputs_and_outputs(self):
         change_from = "AIEUOY"
         change_into = "&"
-        in_out = self.g.gen_samples("lab2", self.sample_length, change_from, change_into)
+        in_out = self.g.gen_samples("lab2", (change_from, change_into))
         self.assertEqual(len(in_out), self.g.num_of_samples)
-        for key, value in in_out.items():
-            for char in key:
-                self.failIf(char in change_from and char in value, "witam")
-            self.assertEqual(len(key), self.sample_length)
+        for test_input, test_output in in_out.items():
+            for char in test_input:
+                self.failIf(char in change_from and char in test_output, "witam")
+            self.assertEqual(test_input(test_input), self.sample_length)
 
     def test_lab_3_gen_output_for_given_input(self):
         num_a = (2**256) - 1

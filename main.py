@@ -1,9 +1,9 @@
-#!/home/dec/.pyenv/bin/python3.1
+#!/usr/bin/env python3.1
 from optparse import OptionParser
 import os
-import sys
 
 from grader.grader import Grader
+
 
 def main():
     parser = OptionParser(usage="%prog [options] <arguments>", version="%prog 0.1")
@@ -25,20 +25,6 @@ def main():
 
     grader = Grader(options.root_dir, options.labs)
     grader.launch()
-
-
-
-"""
-
-    root_dir = sys.argv[1]
-    labs = sys.argv[2:]
-    grader = Grader(root_dir, labs)
-
-    for directory in os.listdir(root_dir):
-        if os.path.isdir(os.path.join(root_dir, directory)):
-            for lab in labs:
-                grader.grade_lab(directory, lab)
-"""
 
 if __name__ == "__main__":
     main()

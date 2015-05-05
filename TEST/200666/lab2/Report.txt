@@ -1,4 +1,4 @@
-*** 05.05.2015 17:21:14 ***
+*** 05.05.2015 23:16:27 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab2'
 make: *** Nie podano obiektów i nie znaleziono makefile. Stop.
