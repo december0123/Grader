@@ -1,0 +1,6 @@
+*** 03.05.2015 10:59:46 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/projekt/TEST/200646/lab1'
+echo "Jestesmy w makefilu"
+Jestesmy w makefilu
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/projekt/TEST/200646/lab1'
