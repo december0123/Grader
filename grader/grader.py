@@ -6,10 +6,11 @@ from grader.generator import Generator
 
 
 class Grader:
-    def __init__(self, root_dir, labs):
+    def __init__(self, root_dir, labs, students=None):
         self.labs = labs
         self.root_dir = root_dir
         self.cur_dir = root_dir
+        self.students = students
         self.num_of_samples = 5
         self.sample_length = 15
         self.bitness = 512
@@ -27,8 +28,15 @@ class Grader:
     def launch(self):
         for student_dir in os.listdir(self.root_dir):
             if os.path.isdir(os.path.join(self.root_dir, student_dir)):
-                for lab in self.labs:
-                    self.grade_lab(student_dir, lab)
+                if self.students is not None:
+                    if student_dir in self.students:
+                        for lab in self.labs:
+                            self.grade_lab(student_dir, lab)
+                            print("Ocenilem " + student_dir)
+                else:
+                    for lab in self.labs:
+                        self.grade_lab(student_dir, lab)
+                        print("Ocenilem " + student_dir)
         self.cur_dir = self.root_dir
 
     def grade_lab(self, student_dir, lab):
