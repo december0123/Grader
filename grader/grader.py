@@ -12,11 +12,11 @@ class Grader:
         self.cur_dir = root_dir
         self.num_of_samples = 5
         self.sample_length = 15
-        bitness = 512
+        self.bitness = 512
         self.change_from = "AEIOUY"
         self.change_to = "%"
         self.generator = Generator()
-        self.opt = {"lab1": None, "lab2": {"change_from": self.change_from, "change_to": self.change_to}, "lab3": bitness}
+        self.opt = {"lab1": [None], "lab2": [self.change_from, self.change_to], "lab3": [self.bitness]}
 
     @property
     def info(self):
@@ -35,7 +35,10 @@ class Grader:
         self.cur_dir = os.path.join(self.root_dir, student_dir, lab)
         build_succeeded = self.build_project()
         if build_succeeded:
-            self.test_project(lab)
+            try:
+                self.test_project(lab)
+            except OSError as e:
+                print(e)
         return build_succeeded
 
     def build_project(self):
@@ -55,14 +58,13 @@ class Grader:
             report.write("*** Zaczynam testowanie projektu... *** \n")
             report.flush()
             tests = self.generator.gen_samples(lab, self.opt[lab])
-            for test_input, output in tests.items():
-                print(test_input)
-                w, i, t = test_input
-                ret_value = sub.Popen([self.cur_dir + "/" + lab, w, i, t], stdout=sub.PIPE)
-                output = ret_value.stdout.read().decode("utf-8")
-                ret_value.communicate()
-                line = "\n\nWejscie: " + w + i + t + "\nSpodziewane wyjscie: " + output
-                if output == output:
+            for test_input, test_output in tests.items():
+                command = [self.cur_dir + "/" + lab] + list(test_input)
+                popen = sub.Popen(command, stdout=sub.PIPE)
+                output = popen.stdout.read().decode("utf-8")
+                popen.communicate()
+                line = "\n\nWejscie: " + str(list(test_input)) + "\nSpodziewane wyjscie: " + test_output
+                if output == test_output:
                     report.write(line + " OK")
                 else:
                     report.write(line + " BLAD\n")

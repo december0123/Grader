@@ -1,2 +1,2 @@
-all:
-	echo "Jestesmy w makefilu"
+witam:
+	echo "witam"

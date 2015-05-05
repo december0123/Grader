@@ -1,29 +1,29 @@
-*** 05.05.2015 23:16:27 ***
+*** 05.05.2015 23:57:33 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 05.05.2015 23:16:27 ***
+*** 05.05.2015 23:57:33 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: SpZmOrechange_fromchange_to
-Spodziewane wyjscie: SpZchange_toOchange_tochange_to OK
+Wejscie: ['M52tNlx', 'AEIOUY', '%']
+Spodziewane wyjscie: M52tNlx OK
 
-Wejscie: 38nJJZ8change_fromchange_to
-Spodziewane wyjscie: 38change_toJJZ8 OK
+Wejscie: ['azM4Lbn', 'AEIOUY', '%']
+Spodziewane wyjscie: azM4Lbn OK
 
-Wejscie: zDtNpYKchange_fromchange_to
-Spodziewane wyjscie: zDtNpYK OK
+Wejscie: ['HfkcXPI', 'AEIOUY', '%']
+Spodziewane wyjscie: HfkcXP% OK
 
-Wejscie: d31sz1hchange_fromchange_to
-Spodziewane wyjscie: d31sz1change_to OK
+Wejscie: ['mtpkz8l', 'AEIOUY', '%']
+Spodziewane wyjscie: mtpkz8l OK
 
-Wejscie: pLfmVMHchange_fromchange_to
-Spodziewane wyjscie: pLchange_tochange_toVMH OK
+Wejscie: ['GkEHqAz', 'AEIOUY', '%']
+Spodziewane wyjscie: Gk%Hq%z OK
 
-Wejscie: kHrH5agchange_fromchange_to
-Spodziewane wyjscie: kHchange_toH5change_tochange_to OK
+Wejscie: ['VAHNBmz', 'AEIOUY', '%']
+Spodziewane wyjscie: V%HNBmz OK
 
-Wejscie: heBaUcJchange_fromchange_to
-Spodziewane wyjscie: change_tochange_toBchange_toUchange_toJ OK
+Wejscie: ['2yzjOZG', 'AEIOUY', '%']
+Spodziewane wyjscie: 2yzj%ZG OK
