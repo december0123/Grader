@@ -54,7 +54,7 @@ class TestGenerator(unittest.TestCase):
 
     def setUp(self):
         self.num_of_samples = 5
-        self.size_of_sample = 10
+        self.sample_length = 10
         self.g = Generator(num_of_samples=self.num_of_samples)
 
     def test_lab_1_gen_output_for_given_input(self):
@@ -62,11 +62,11 @@ class TestGenerator(unittest.TestCase):
         self.assertEqual(input_string, Generator.gen_output_lab_1(input_string))
 
     def test_lab_1_gen_dict_of_inputs_and_outputs(self):
-        in_out = self.g.gen_samples_lab1(self.size_of_sample)
+        in_out = self.g.gen_samples("lab1", self.sample_length)
         self.assertEqual(len(in_out), self.num_of_samples)
         for k, v in in_out.items():
             self.assertEqual(k, v)
-            self.assertEqual(len(k), self.size_of_sample)
+            self.assertEqual(len(k), self.sample_length)
 
     def test_lab_2_gen_output_for_given_input(self):
         input_string = "test string WITH lower ANd UppER Case leTTERS"
@@ -78,12 +78,12 @@ class TestGenerator(unittest.TestCase):
     def test_lab_2_gen_dict_of_inputs_and_outputs(self):
         change_from = "AIEUOY"
         change_into = "&"
-        in_out = self.g.gen_samples_lab2(self.size_of_sample, change_from, change_into)
+        in_out = self.g.gen_samples("lab2", self.sample_length, change_from, change_into)
         self.assertEqual(len(in_out), self.g.num_of_samples)
         for key, value in in_out.items():
             for char in key:
                 self.failIf(char in change_from and char in value, "witam")
-            self.assertEqual(len(key), self.size_of_sample)
+            self.assertEqual(len(key), self.sample_length)
 
     def test_lab_3_gen_output_for_given_input(self):
         num_a = (2**256) - 1
@@ -92,7 +92,7 @@ class TestGenerator(unittest.TestCase):
 
     def test_lab_3_gen_dict_of_inputs_and_outputs(self):
         bitness = 256
-        in_out = self.g.gen_samples_lab3(bitness)
+        in_out = self.g.gen_samples("lab3", bitness)
         self.assertEqual(len(in_out), self.num_of_samples)
         for key, value in in_out.items():
             self.assertEqual(key[0] + key[1], value)

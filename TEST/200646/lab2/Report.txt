@@ -1,23 +1,23 @@
-*** 05.05.2015 00:10:24 ***
+*** 05.05.2015 17:21:11 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-make: 'lab2' jest aktualne.
+clang++ lab2.cpp -o lab2 -std=c++14
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 05.05.2015 00:10:24 ***
+*** 05.05.2015 17:21:14 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: SGBDOANiigEC5cR
-Spodziewane wyjscie: SGBDO*NiigEC5cR OK
+Wejscie: 5ifYDm10eR1UBKH
+Spodziewane wyjscie: 5ifYDm10eR1UBKH OK
 
-Wejscie: E4jLRR7nWi0Y3PP
-Spodziewane wyjscie: E4jLRR7nWi0Y3PP OK
+Wejscie: ZMvV3nLiK1pJXQ5
+Spodziewane wyjscie: ZMvV3nLiK1pJXQ5 OK
 
-Wejscie: gCbTnuF6Pkw3iKE
-Spodziewane wyjscie: gCbTnuF6Pkw3iKE OK
+Wejscie: H4tKvvpqpzM3acW
+Spodziewane wyjscie: H4tKvvpqpzM3acW OK
 
-Wejscie: VRYvvNksDkUarZQ
-Spodziewane wyjscie: VRYvvNksDkUarZQ OK
+Wejscie: kNWPD04BN6Cln4G
+Spodziewane wyjscie: kNWPD04BN6Cln4G OK
 
-Wejscie: NJbxQnPalZNcBWc
-Spodziewane wyjscie: NJbxQnPalZNcBWc OK
+Wejscie: VoC8d0VTvLB8GlQ
+Spodziewane wyjscie: VoC8d0VTvLB8GlQ OK
