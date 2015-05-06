@@ -1,0 +1,5 @@
+*** 06.05.2015 00:13:45 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
+make: *** Nie podano obiektów i nie znaleziono makefile. Stop.
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
