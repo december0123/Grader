@@ -17,7 +17,7 @@ class Grader:
         self.change_from = "AEIOUY"
         self.change_to = "%"
         self.generator = Generator()
-        self.opt = {"lab1": [None], "lab2": [self.change_from, self.change_to], "lab3": [self.bitness]}
+        self.opt = {"lab1": None, "lab2": [self.change_from, self.change_to], "lab3": self.bitness}
 
     @property
     def info(self):

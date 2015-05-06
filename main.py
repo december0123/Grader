@@ -6,14 +6,22 @@ import os
 from grader.grader import Grader
 
 
-def get_students(options):
+def get_students_from_csv(options):
+    """
+    Parses given .csv file to retrieve students' index numbers.
+    Lines that contain needed numbers look like this:
+    ID;_xxxINDEX_NUMBER;LAST_NAME;NAMES;x;x;xx-xxx-xxx-xx-xx-xx-xx-;;DATE_OF_BIRTH;
+
+    :param options:
+    :return:
+    """
+
     file = csv.reader(open(options.csv_file), delimiter=';')
-    dummy = 0
     students = []
     for row in file:
-        dummy += 1
-        if dummy > 10:
-            students.append(row[1][4:])
+        if '_' not in row[1]:
+            continue
+        students.append(row[1][4:])
     return students
 
 
@@ -34,7 +42,7 @@ def main():
 
     students = None
     if options.csv_file is not None:
-        students = get_students(options)
+        students = get_students_from_csv(options)
 
     grader = Grader(options.root_dir, options.labs, students)
     grader.launch()

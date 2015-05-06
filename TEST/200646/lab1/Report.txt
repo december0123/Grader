@@ -1,8 +1,8 @@
-*** 06.05.2015 00:13:45 ***
+*** 06.05.2015 08:58:53 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 echo "witam"
 witam
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
-*** 06.05.2015 00:13:45 ***
+*** 06.05.2015 08:58:53 ***
 *** Zaczynam testowanie projektu... *** 
