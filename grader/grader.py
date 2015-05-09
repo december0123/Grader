@@ -17,7 +17,7 @@ class Grader:
         self.change_from = "AEIOUY"
         self.change_to = "%"
         self.generator = Generator()
-        self.opt = {"lab1": None, "lab2": [self.change_from, self.change_to], "lab3": self.bitness}
+        self.opt = {"lab1": [], "lab2": [self.change_from, self.change_to], "lab3": self.bitness}
 
     @property
     def info(self):
@@ -66,8 +66,11 @@ class Grader:
             report.write("*** Zaczynam testowanie projektu... *** \n")
             report.flush()
             tests = self.generator.gen_samples(lab, self.opt[lab])
-            for test_input, test_output in tests.items():
-                command = [self.cur_dir + "/" + lab] + list(test_input)
+            for test in tests:
+                print(test)
+                test_input = test['input']
+                test_output = test['output']
+                command = [self.cur_dir + "/" + lab] + test_input
                 popen = sub.Popen(command, stdout=sub.PIPE)
                 output = popen.stdout.read().decode("utf-8")
                 popen.communicate()
