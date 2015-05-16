@@ -13,7 +13,7 @@ def get_students_from_csv(options):
     ID;_xxxINDEX_NUMBER;LAST_NAME;NAMES;x;x;xx-xxx-xxx-xx-xx-xx-xx-;;DATE_OF_BIRTH;
 
     :param options:
-    :return:
+    :return: list of students
     """
 
     file = csv.reader(open(options.csv_file), delimiter=';')
@@ -38,7 +38,7 @@ def main():
 
     if options.labs is None:
         print("Nie podano laboratorium do ocenienia!")
-        return
+        return -1
 
     students = None
     if options.csv_file is not None:

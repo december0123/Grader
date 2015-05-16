@@ -1,29 +1,53 @@
-*** 15.05.2015 15:36:37 ***
+*** 16.05.2015 15:47:14 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
-*** 15.05.2015 15:36:37 ***
+*** 16.05.2015 15:47:14 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: ['qBhW09H']
-Spodziewane wyjscie: qBhW09H OK
+Wejscie: ['YeIQ4x8rjx']
+Spodziewane wyjscie: YeIQ4x8rjx OK
 
-Wejscie: ['XP3Kgak']
-Spodziewane wyjscie: XP3Kgak OK
+Wejscie: ['f5jB4LIKLj']
+Spodziewane wyjscie: f5jB4LIKLj OK
 
-Wejscie: ['yUFCqVD']
-Spodziewane wyjscie: yUFCqVD OK
+Wejscie: ['O74VME5llo']
+Spodziewane wyjscie: O74VME5llo OK
 
-Wejscie: ['vuTNdYP']
-Spodziewane wyjscie: vuTNdYP OK
+Wejscie: ['DputpAQNFu']
+Spodziewane wyjscie: DputpAQNFu OK
 
-Wejscie: ['IyVS8WZ']
-Spodziewane wyjscie: IyVS8WZ OK
+Wejscie: ['XfFSBXMORd']
+Spodziewane wyjscie: XfFSBXMORd OK
 
-Wejscie: ['ShTbBBe']
-Spodziewane wyjscie: ShTbBBe OK
+Wejscie: ['2ggGB62bWj']
+Spodziewane wyjscie: 2ggGB62bWj OK
 
-Wejscie: ['AZCwnTe']
-Spodziewane wyjscie: AZCwnTe OK
+Wejscie: ['Kz48fRpNxm']
+Spodziewane wyjscie: Kz48fRpNxm OK
+
+Wejscie: ['T6az3RXsP6']
+Spodziewane wyjscie: T6az3RXsP6 OK
+
+Wejscie: ['BdwFU6Q1BH']
+Spodziewane wyjscie: BdwFU6Q1BH OK
+
+Wejscie: ['jYhcLBi9SS']
+Spodziewane wyjscie: jYhcLBi9SS OK
+
+Wejscie: ['WxBiNg4ots']
+Spodziewane wyjscie: WxBiNg4ots OK
+
+Wejscie: ['4UnNBK4dMi']
+Spodziewane wyjscie: 4UnNBK4dMi OK
+
+Wejscie: ['6w5uD7dSdY']
+Spodziewane wyjscie: 6w5uD7dSdY OK
+
+Wejscie: ['Zv0qTjbs3l']
+Spodziewane wyjscie: Zv0qTjbs3l OK
+
+Wejscie: ['JLfV51DFyv']
+Spodziewane wyjscie: JLfV51DFyv OK

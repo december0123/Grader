@@ -11,13 +11,7 @@ class Grader:
         self.root_dir = root_dir
         self.cur_dir = root_dir
         self.students = students
-        self.num_of_samples = 5
-        self.sample_length = 15
-        self.bitness = 512
-        self.change_from = "AEIOUY"
-        self.change_to = "%"
         self.generator = Generator()
-        self.opt = {"lab1": [], "lab2": [self.change_from, self.change_to], "lab3": self.bitness}
 
     @property
     def info(self):
@@ -65,7 +59,7 @@ class Grader:
             report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Zaczynam testowanie projektu... *** \n")
             report.flush()
-            tests = self.generator.gen_samples(lab, self.opt[lab])
+            tests = self.generator.gen_samples(lab)
             for test in tests:
                 print(test)
                 test_input = test['input']

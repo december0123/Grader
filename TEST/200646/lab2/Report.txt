@@ -1,29 +1,53 @@
-*** 15.05.2015 15:36:39 ***
+*** 16.05.2015 15:48:32 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 15.05.2015 15:36:39 ***
+*** 16.05.2015 15:48:32 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: ['4iVtGkT', 'AEIOUY', '%']
-Spodziewane wyjscie: 4iVtGkT OK
+Wejscie: ['5cyW4ej8u4', 'AEIOUY', '@']
+Spodziewane wyjscie: 5cyW4ej8u4 OK
 
-Wejscie: ['xUDZS7n', 'AEIOUY', '%']
-Spodziewane wyjscie: x%DZS7n OK
+Wejscie: ['8amxRr8vnR', 'AEIOUY', '@']
+Spodziewane wyjscie: 8amxRr8vnR OK
 
-Wejscie: ['UqXsW7v', 'AEIOUY', '%']
-Spodziewane wyjscie: %qXsW7v OK
+Wejscie: ['wqPg1l3N8m', 'AEIOUY', '@']
+Spodziewane wyjscie: wqPg1l3N8m OK
 
-Wejscie: ['MUPgvWK', 'AEIOUY', '%']
-Spodziewane wyjscie: M%PgvWK OK
+Wejscie: ['EVOVFP0Gra', 'AEIOUY', '@']
+Spodziewane wyjscie: @V@VFP0Gra OK
 
-Wejscie: ['Y9iTaZq', 'AEIOUY', '%']
-Spodziewane wyjscie: %9iTaZq OK
+Wejscie: ['tsjhornZaU', 'AEIOUY', '@']
+Spodziewane wyjscie: tsjhornZa@ OK
 
-Wejscie: ['7OEPYt7', 'AEIOUY', '%']
-Spodziewane wyjscie: 7%%P%t7 OK
+Wejscie: ['sJ7tBgteXk', 'AEIOUY', '@']
+Spodziewane wyjscie: sJ7tBgteXk OK
 
-Wejscie: ['LwOb83D', 'AEIOUY', '%']
-Spodziewane wyjscie: Lw%b83D OK
+Wejscie: ['d5z1IbTdVd', 'AEIOUY', '@']
+Spodziewane wyjscie: d5z1@bTdVd OK
+
+Wejscie: ['bPSBUvuoCR', 'AEIOUY', '@']
+Spodziewane wyjscie: bPSB@vuoCR OK
+
+Wejscie: ['0T1ZVtAm1f', 'AEIOUY', '@']
+Spodziewane wyjscie: 0T1ZVt@m1f OK
+
+Wejscie: ['6Wok7aCLsp', 'AEIOUY', '@']
+Spodziewane wyjscie: 6Wok7aCLsp OK
+
+Wejscie: ['4TxxvphU4y', 'AEIOUY', '@']
+Spodziewane wyjscie: 4Txxvph@4y OK
+
+Wejscie: ['2P8j0886NI', 'AEIOUY', '@']
+Spodziewane wyjscie: 2P8j0886N@ OK
+
+Wejscie: ['b7YDS585Th', 'AEIOUY', '@']
+Spodziewane wyjscie: b7@DS585Th OK
+
+Wejscie: ['TOW0KamDVR', 'AEIOUY', '@']
+Spodziewane wyjscie: T@W0KamDVR OK
+
+Wejscie: ['DwtVjr2JCU', 'AEIOUY', '@']
+Spodziewane wyjscie: DwtVjr2JC@ OK
