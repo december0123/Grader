@@ -21,9 +21,9 @@ class TestGenerator(unittest.TestCase):
     def test_lab_1_gen_dict_of_inputs_and_outputs(self):
         in_out = self.g.gen_samples("lab1")
         self.assertEqual(len(in_out), self.num_of_samples)
-        for k, v in in_out.items():
-            self.assertEqual(k, v)
-            self.assertEqual(len(k), self.sample_length)
+        for test in in_out:
+            self.assertEqual(test["input"], test["output"])
+            self.assertEqual(test["input", self.sample_length])
 
     def test_lab_2_gen_output_for_given_input(self):
         input_string = "test string WITH lower ANd UppER Case leTTERS"
@@ -37,10 +37,10 @@ class TestGenerator(unittest.TestCase):
         change_into = "&"
         in_out = self.g.gen_samples("lab2", [change_from, change_into])
         self.assertEqual(len(in_out), self.g.num_of_samples)
-        for test_input, test_output in in_out.items():
-            for char in test_input:
-                self.failIf(char in change_from and char in test_output, "witam")
-            self.assertEqual(len(test_input[0]), self.sample_length)
+        for test in in_out:
+            for char in test["input"][1]
+                self.failIf(char in change_from and char in test["output"], "Znaki nie zostaly zmienione")
+            self.assertEqual(len(test["input"][0]), self.sample_length)
 
     def test_lab_3_gen_output_for_given_input(self):
         num_a = (2**256) - 1

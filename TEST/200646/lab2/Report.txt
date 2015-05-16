@@ -1,29 +1,29 @@
-*** 06.05.2015 08:21:09 ***
+*** 15.05.2015 15:36:39 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 06.05.2015 08:21:09 ***
+*** 15.05.2015 15:36:39 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: ['BjNIsGm', 'AEIOUY', '%']
-Spodziewane wyjscie: BjN%sGm OK
+Wejscie: ['4iVtGkT', 'AEIOUY', '%']
+Spodziewane wyjscie: 4iVtGkT OK
 
-Wejscie: ['NdSJxHg', 'AEIOUY', '%']
-Spodziewane wyjscie: NdSJxHg OK
+Wejscie: ['xUDZS7n', 'AEIOUY', '%']
+Spodziewane wyjscie: x%DZS7n OK
 
-Wejscie: ['glXpZxs', 'AEIOUY', '%']
-Spodziewane wyjscie: glXpZxs OK
+Wejscie: ['UqXsW7v', 'AEIOUY', '%']
+Spodziewane wyjscie: %qXsW7v OK
 
-Wejscie: ['G6ey2qs', 'AEIOUY', '%']
-Spodziewane wyjscie: G6ey2qs OK
+Wejscie: ['MUPgvWK', 'AEIOUY', '%']
+Spodziewane wyjscie: M%PgvWK OK
 
-Wejscie: ['zjspFda', 'AEIOUY', '%']
-Spodziewane wyjscie: zjspFda OK
+Wejscie: ['Y9iTaZq', 'AEIOUY', '%']
+Spodziewane wyjscie: %9iTaZq OK
 
-Wejscie: ['aNrnTbr', 'AEIOUY', '%']
-Spodziewane wyjscie: aNrnTbr OK
+Wejscie: ['7OEPYt7', 'AEIOUY', '%']
+Spodziewane wyjscie: 7%%P%t7 OK
 
-Wejscie: ['7u4raUB', 'AEIOUY', '%']
-Spodziewane wyjscie: 7u4ra%B OK
+Wejscie: ['LwOb83D', 'AEIOUY', '%']
+Spodziewane wyjscie: Lw%b83D OK

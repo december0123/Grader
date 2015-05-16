@@ -1,8 +1,29 @@
-*** 06.05.2015 08:58:53 ***
+*** 15.05.2015 15:36:37 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
-echo "witam"
-witam
+make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
-*** 06.05.2015 08:58:53 ***
+*** 15.05.2015 15:36:37 ***
 *** Zaczynam testowanie projektu... *** 
+
+
+Wejscie: ['qBhW09H']
+Spodziewane wyjscie: qBhW09H OK
+
+Wejscie: ['XP3Kgak']
+Spodziewane wyjscie: XP3Kgak OK
+
+Wejscie: ['yUFCqVD']
+Spodziewane wyjscie: yUFCqVD OK
+
+Wejscie: ['vuTNdYP']
+Spodziewane wyjscie: vuTNdYP OK
+
+Wejscie: ['IyVS8WZ']
+Spodziewane wyjscie: IyVS8WZ OK
+
+Wejscie: ['ShTbBBe']
+Spodziewane wyjscie: ShTbBBe OK
+
+Wejscie: ['AZCwnTe']
+Spodziewane wyjscie: AZCwnTe OK

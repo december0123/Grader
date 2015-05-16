@@ -54,9 +54,9 @@ class Grader:
             report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Zaczynam budowanie projektu... *** \n")
             report.flush()
-            ret_value = sub.Popen(["make", "-C" + self.cur_dir], stdout=report, stderr=report)
-        ret_value.communicate()
-        if ret_value.returncode == 0:
+            popen = sub.Popen(["make", "-C" + self.cur_dir], stdout=report, stderr=report)
+        popen.communicate()
+        if popen.returncode == 0:
             return True
         return False
 
@@ -76,8 +76,10 @@ class Grader:
                 popen.communicate()
                 line = "\n\nWejscie: " + str(list(test_input)) + "\nSpodziewane wyjscie: " + test_output
                 if output == test_output:
+                    print("OK")
                     report.write(line + " OK")
                 else:
+                    print("BLAD")
                     report.write(line + " BLAD\n")
                     report.write("Otrzymane wyjscie: " + output)
 

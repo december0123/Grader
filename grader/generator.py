@@ -23,13 +23,13 @@ class Generator:
     def gen_output_lab_3(num_a, num_b):
         return num_a + num_b
 
-    def gen_samples(self, lab, args=[]):
+    def gen_samples(self, lab, args):
         try:
             return self.labs[lab](args)
         except TypeError:
             return self.labs[lab](*args)
 
-    def gen_samples_lab1(self, dummy=[]):
+    def gen_samples_lab1(self):
         in_out = []
         for i in range(self.num_of_samples):
             random_string = Generator.random_string(self.sample_length, upper=True, lower=True, digits=True)
