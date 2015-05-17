@@ -26,7 +26,7 @@ class Generator:
                      "lab2": [config.getint("lab2", "sample_length"), config.get("lab2", "change_from"),
                               config.get("lab2", "change_to")],
                      "lab3": config.getint("lab3", "bitness"),
-                     "lab6": [lab6.func]}
+                     "lab6": lab6.func}
 
     @staticmethod
     def gen_output_lab_1(input_string):
@@ -45,7 +45,7 @@ class Generator:
         result = 0.0
         for i in Generator.frange(start, stop, step):
             result += function(i)
-        return result
+        return "%.2f" % round(result, 2)
 
     def gen_samples(self, lab):
         try:
@@ -72,24 +72,20 @@ class Generator:
     def gen_samples_lab3(self, bitness):
         in_out = {}
         for i in range(self.number_of_samples):
-            num_a = Generator.random_int(0, (2 ** bitness) - 1)
-            num_b = Generator.random_int(0, (2 ** bitness) - 1)
+            num_a = random.randint(0, (2 ** bitness) - 1)
+            num_b = random.randint(0, (2 ** bitness) - 1)
             in_out[(num_a, num_b)] = self.gen_output_lab_3(num_a, num_b)
         return in_out
 
     def gen_samples_lab6(self, function):
         in_out = []
         for i in range(self.number_of_samples):
-            start = 1
-            stop = 5
-            step = 1
+            start = random.randint(0, 100)
+            stop = random.randint(start, 100)
+            step = random.uniform(0.1, 1)
             in_out.append({'input': [str(start), str(stop), str(step)],
                            'output': self.gen_output_lab_6(function, start, stop, step)})
         return in_out
-
-    @classmethod
-    def random_int(cls, l_bound, h_bound):
-        return random.randint(l_bound, h_bound)
 
     @classmethod
     def random_string(cls, length, upper=False, lower=False, digits=False):

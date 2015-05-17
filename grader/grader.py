@@ -74,7 +74,7 @@ class Grader:
                     output = popen.stdout.read().decode("utf-8")
                     popen.communicate()
                     line = "\n\nWejscie: " + str(list(test_input)) + "\nSpodziewane wyjscie: " + str(test_output)
-                    if (float(output) if lab == "lab6" else output) == test_output:
+                    if output == str(test_output):
                         print("OK")
                         report.write(line + " OK")
                     else:
