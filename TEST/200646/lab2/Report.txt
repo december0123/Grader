@@ -1,53 +1,53 @@
-*** 17.05.2015 18:01:46 ***
+*** 18.05.2015 00:51:02 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
-*** 17.05.2015 18:01:46 ***
+*** 18.05.2015 00:51:02 ***
 *** Zaczynam testowanie projektu... *** 
 
 
-Wejscie: ['PzJiawUMqK', 'AEIOUY', '@']
-Spodziewane wyjscie: PzJiaw@MqK OK
+Wejscie: ['DRRuLEiQ8q', 'AEIOUY', '@']
+Spodziewane wyjscie: DRRuL@iQ8q OK
 
-Wejscie: ['Q9L9mhDLsh', 'AEIOUY', '@']
-Spodziewane wyjscie: Q9L9mhDLsh OK
+Wejscie: ['QJntU7m96p', 'AEIOUY', '@']
+Spodziewane wyjscie: QJnt@7m96p OK
 
-Wejscie: ['WZZRDVH1Nu', 'AEIOUY', '@']
-Spodziewane wyjscie: WZZRDVH1Nu OK
+Wejscie: ['GdEsRYRCFj', 'AEIOUY', '@']
+Spodziewane wyjscie: Gd@sR@RCFj OK
 
-Wejscie: ['5LiqGhlq0W', 'AEIOUY', '@']
-Spodziewane wyjscie: 5LiqGhlq0W OK
+Wejscie: ['smxGNsTDxe', 'AEIOUY', '@']
+Spodziewane wyjscie: smxGNsTDxe OK
 
-Wejscie: ['7u6J7Nmo85', 'AEIOUY', '@']
-Spodziewane wyjscie: 7u6J7Nmo85 OK
+Wejscie: ['NS1CaLV3mb', 'AEIOUY', '@']
+Spodziewane wyjscie: NS1CaLV3mb OK
 
-Wejscie: ['I5MdAKs2IU', 'AEIOUY', '@']
-Spodziewane wyjscie: @5Md@Ks2@@ OK
+Wejscie: ['XvAtV8EXve', 'AEIOUY', '@']
+Spodziewane wyjscie: Xv@tV8@Xve OK
 
-Wejscie: ['BBFz1XjCub', 'AEIOUY', '@']
-Spodziewane wyjscie: BBFz1XjCub OK
+Wejscie: ['SxFTawaWdr', 'AEIOUY', '@']
+Spodziewane wyjscie: SxFTawaWdr OK
 
-Wejscie: ['anzQwau4Yq', 'AEIOUY', '@']
-Spodziewane wyjscie: anzQwau4@q OK
+Wejscie: ['moIzmxmf3Y', 'AEIOUY', '@']
+Spodziewane wyjscie: mo@zmxmf3@ OK
 
-Wejscie: ['9IHe8pHn89', 'AEIOUY', '@']
-Spodziewane wyjscie: 9@He8pHn89 OK
+Wejscie: ['wREJO5ob3I', 'AEIOUY', '@']
+Spodziewane wyjscie: wR@J@5ob3@ OK
 
-Wejscie: ['6H9uwuBDkk', 'AEIOUY', '@']
-Spodziewane wyjscie: 6H9uwuBDkk OK
+Wejscie: ['jLmCFCwAiu', 'AEIOUY', '@']
+Spodziewane wyjscie: jLmCFCw@iu OK
 
-Wejscie: ['vcqQ6iNWMe', 'AEIOUY', '@']
-Spodziewane wyjscie: vcqQ6iNWMe OK
+Wejscie: ['zRXYCCpwYK', 'AEIOUY', '@']
+Spodziewane wyjscie: zRX@CCpw@K OK
 
-Wejscie: ['S6HGsa7jtk', 'AEIOUY', '@']
-Spodziewane wyjscie: S6HGsa7jtk OK
+Wejscie: ['HLkI6zgO8o', 'AEIOUY', '@']
+Spodziewane wyjscie: HLk@6zg@8o OK
 
-Wejscie: ['YbCTRONLUD', 'AEIOUY', '@']
-Spodziewane wyjscie: @bCTR@NL@D OK
+Wejscie: ['tnbTTw5xUF', 'AEIOUY', '@']
+Spodziewane wyjscie: tnbTTw5x@F OK
 
-Wejscie: ['QJuyZvcgtJ', 'AEIOUY', '@']
-Spodziewane wyjscie: QJuyZvcgtJ OK
+Wejscie: ['Hv1zO5NYyy', 'AEIOUY', '@']
+Spodziewane wyjscie: Hv1z@5N@yy OK
 
-Wejscie: ['m0BE3OPssM', 'AEIOUY', '@']
-Spodziewane wyjscie: m0B@3@PssM OK
+Wejscie: ['AwSG1v35Q8', 'AEIOUY', '@']
+Spodziewane wyjscie: @wSG1v35Q8 OK

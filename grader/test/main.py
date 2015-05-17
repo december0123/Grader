@@ -23,7 +23,7 @@ class TestGenerator(unittest.TestCase):
         self.assertEqual(len(in_out), self.num_of_samples)
         for test in in_out:
             self.assertEqual(test["input"], test["output"])
-            self.assertEqual(test["input", self.sample_length])
+            self.assertEqual(test["input"], self.sample_length)
 
     def test_lab_2_gen_output_for_given_input(self):
         input_string = "test string WITH lower ANd UppER Case leTTERS"

@@ -11,6 +11,7 @@ sys.path.append(os.path.expanduser("~") + "/.grader")
 
 import lab6_function as lab6
 
+
 class Generator:
     def __init__(self):
         config = configparser.RawConfigParser()
@@ -36,6 +37,7 @@ class Generator:
     def gen_output_lab_2(input_string, change_from, change_into):
         return re.sub("[" + change_from + "]", change_into, input_string)
 
+    # FIXME
     @staticmethod
     def gen_output_lab_3(num_a, num_b):
         return num_a + num_b
@@ -43,7 +45,7 @@ class Generator:
     @staticmethod
     def gen_output_lab_6(function, start, stop, step):
         result = 0.0
-        for i in Generator.frange(start, stop, step):
+        for i in _frange(start, stop, step):
             result += function(i)
         return "%.2f" % round(result, 2)
 
@@ -56,19 +58,20 @@ class Generator:
     def gen_samples_lab1(self, sample_length):
         in_out = []
         for i in range(self.number_of_samples):
-            random_string = Generator.random_string(sample_length, upper=True, lower=True, digits=True)
+            random_string = _random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string], 'output': self.gen_output_lab_1(random_string)})
         return in_out
 
     def gen_samples_lab2(self, sample_length, change_from, change_to):
         in_out = []
         for i in range(self.number_of_samples):
-            random_string = Generator.random_string(sample_length, upper=True, lower=True, digits=True)
+            random_string = _random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string, change_from, change_to],
                            'output': self.gen_output_lab_2(random_string, change_from,
                                                            change_to)})
         return in_out
 
+    # FIXME
     def gen_samples_lab3(self, bitness):
         in_out = {}
         for i in range(self.number_of_samples):
@@ -82,27 +85,27 @@ class Generator:
         for i in range(self.number_of_samples):
             start = random.randint(0, 100)
             stop = random.randint(start, 100)
-            step = random.uniform(0.1, 1)
+            step = round(random.uniform(0.1, 1), 2)
             in_out.append({'input': [str(start), str(stop), str(step)],
                            'output': self.gen_output_lab_6(function, start, stop, step)})
         return in_out
 
-    @classmethod
-    def random_string(cls, length, upper=False, lower=False, digits=False):
-        random_string = ''.join(
-            random.SystemRandom().choice((string.ascii_lowercase if upper else "") +
-                                         (string.ascii_uppercase if lower else "") +
-                                         (string.digits if digits else "")) for _ in range(length))
-        return random_string
 
-    @classmethod
-    def frange(cls, start, stop, step):
-        """
-        Generator that produces numbers in range <start; stop> with step
-        :param start:
-        :param stop:
-        :param step:
-        """
-        while start <= stop:
-            yield start
-            start += step
+def _random_string(length, upper=False, lower=False, digits=False):
+    random_string = ''.join(
+        random.SystemRandom().choice((string.ascii_lowercase if upper else "") +
+                                     (string.ascii_uppercase if lower else "") +
+                                     (string.digits if digits else "")) for _ in range(length))
+    return random_string
+
+
+def _frange(start, stop, step):
+    """
+    Generator that produces numbers in range <start; stop> with step
+    :param start:
+    :param stop:
+    :param step:
+    """
+    while start <= stop:
+        yield start
+        start += step

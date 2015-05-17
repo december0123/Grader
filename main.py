@@ -47,5 +47,6 @@ def main():
     grader = Grader(options.root_dir, options.labs, students)
     grader.launch()
 
+
 if __name__ == "__main__":
     main()
