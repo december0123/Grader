@@ -38,7 +38,7 @@ class TestGenerator(unittest.TestCase):
         in_out = self.g.gen_samples("lab2", [change_from, change_into])
         self.assertEqual(len(in_out), self.g.num_of_samples)
         for test in in_out:
-            for char in test["input"][1]
+            for char in test["input"][1]:
                 self.failIf(char in change_from and char in test["output"], "Znaki nie zostaly zmienione")
             self.assertEqual(len(test["input"][0]), self.sample_length)
 
@@ -53,6 +53,14 @@ class TestGenerator(unittest.TestCase):
         self.assertEqual(len(in_out), self.num_of_samples)
         for key, value in in_out.items():
             self.assertEqual(key[0] + key[1], value)
+
+    def test_lab_6_gen_output_for_given_input(self):
+        start = 0
+        end = 1
+        step = 1
+        def function():
+            pass
+        # self.assertEqual(1, Generator.gen_output_lab_6())
 
 
 class TestGrader(unittest.TestCase):
