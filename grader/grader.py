@@ -21,11 +21,11 @@ class Grader:
 
     def launch(self):
         with open(os.path.join(self.root_dir, "Final_Report.txt"), "w") as report:
-            report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("\n<*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Raport zbiorowy *** \n")
             report.flush()
         for student_dir in os.listdir(self.root_dir):
-            if (student_dir in self.students or not self.students) and\
+            if (student_dir in self.students or not self.students) and \
                     os.path.isdir(os.path.join(self.root_dir, student_dir)):
                 for lab in self.labs:
                     self.grade_lab(student_dir, lab)
@@ -45,7 +45,7 @@ class Grader:
     def build_project(self):
         try:
             with open(os.path.join(self.cur_dir, "Report.txt"), "w") as report:
-                report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+                report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
                 report.write("*** Zaczynam budowanie projektu... *** \n")
                 report.flush()
                 popen = sub.Popen(["make", "-C" + self.cur_dir], stdout=report, stderr=report)
@@ -60,7 +60,7 @@ class Grader:
     def test_project(self, lab):
         try:
             with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
-                report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+                report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
                 report.write("*** Zaczynam testowanie projektu... *** \n")
                 report.flush()
                 tests = self.generator.gen_samples(lab)
@@ -81,6 +81,9 @@ class Grader:
                         print("Otrzymane wyjscie: " + output)
                         report.write(line + " BLAD\n")
                         report.write("Otrzymane wyjscie: " + output)
+            with open(os.path.join(self.root_dir, "Final_Report.txt"), "a") as final:
+                with open(os.path.join(self.cur_dir, "Report.txt")) as report:
+                    final.write(report.read())
         except IOError as e:
             print(e)
 
