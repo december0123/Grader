@@ -67,8 +67,7 @@ class Generator:
         for i in range(self.number_of_samples):
             random_string = _random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string, change_from, change_to],
-                           'output': self.gen_output_lab_2(random_string, change_from,
-                                                           change_to)})
+                           'output': self.gen_output_lab_2(random_string, change_from, change_to)})
         return in_out
 
     # FIXME

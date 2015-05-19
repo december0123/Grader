@@ -1,5 +1,40 @@
-*** 18.05.2015 00:51:00 ***
+
+*** 19.05.2015 22:05:46 ***
+*** Student: 200666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
-make: *** Nie podano obiektów i nie znaleziono makefile. Stop.
+make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
+
+*** 19.05.2015 22:05:46 ***
+*** Zaczynam testowanie projektu... *** 
+Wejscie: ['yJKUB3YVIL']
+Spodziewane wyjscie: yJKUB3YVIL OK
+Wejscie: ['YWdKXybosW']
+Spodziewane wyjscie: YWdKXybosW OK
+Wejscie: ['qtKY4OLNlI']
+Spodziewane wyjscie: qtKY4OLNlI OK
+Wejscie: ['GlOzgfwKzg']
+Spodziewane wyjscie: GlOzgfwKzg OK
+Wejscie: ['iRlQNcyJqn']
+Spodziewane wyjscie: iRlQNcyJqn OK
+Wejscie: ['m1Jx8g1b26']
+Spodziewane wyjscie: m1Jx8g1b26 OK
+Wejscie: ['JNyI0diMWz']
+Spodziewane wyjscie: JNyI0diMWz OK
+Wejscie: ['iIkFKRmTpo']
+Spodziewane wyjscie: iIkFKRmTpo OK
+Wejscie: ['cmb5JElYrE']
+Spodziewane wyjscie: cmb5JElYrE OK
+Wejscie: ['n4EbHbdMGG']
+Spodziewane wyjscie: n4EbHbdMGG OK
+Wejscie: ['HIGCV4RKvU']
+Spodziewane wyjscie: HIGCV4RKvU OK
+Wejscie: ['OkyRamPxOf']
+Spodziewane wyjscie: OkyRamPxOf OK
+Wejscie: ['IzN7fen9Da']
+Spodziewane wyjscie: IzN7fen9Da OK
+Wejscie: ['GsfViWfRcP']
+Spodziewane wyjscie: GsfViWfRcP OK
+Wejscie: ['LsNUgEiExU']
+Spodziewane wyjscie: LsNUgEiExU OK
