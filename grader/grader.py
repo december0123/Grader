@@ -71,14 +71,12 @@ class Grader:
                 tests = self.generator.gen_samples(lab)
                 passed_tests = 0
                 for test in tests:
-                    test_input = test['input']
-                    test_output = test['output']
-                    command = [self.cur_dir + "/" + lab] + test_input
+                    command = [self.cur_dir + "/" + lab] + test['input']
                     popen = sub.Popen(command, stdout=sub.PIPE)
                     output = popen.stdout.read().decode("utf-8")
                     popen.communicate()
-                    line = "Wejscie: " + str(list(test_input)) + "\nSpodziewane wyjscie: " + str(test_output)
-                    if output == str(test_output):
+                    line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
+                    if output == str(test['output']):
                         report.write(line + " OK\n")
                         passed_tests += 1
                     else:
