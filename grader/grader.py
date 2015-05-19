@@ -6,7 +6,7 @@ from grader.generator import Generator
 
 
 class Grader:
-    def __init__(self, root_dir, labs, students=None):
+    def __init__(self, root_dir, labs, students=[]):
         self.labs = labs
         self.root_dir = root_dir
         self.cur_dir = os.getcwd()
@@ -20,17 +20,16 @@ class Grader:
         return info
 
     def launch(self):
+        with open(os.path.join(self.root_dir, "Final_Report.txt"), "w") as report:
+            report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** Raport zbiorowy *** \n")
+            report.flush()
         for student_dir in os.listdir(self.root_dir):
-            if os.path.isdir(os.path.join(self.root_dir, student_dir)):
-                if self.students is not None:
-                    if student_dir in self.students:
-                        for lab in self.labs:
-                            self.grade_lab(student_dir, lab)
-                            print("Ocenilem " + student_dir)
-                else:
-                    for lab in self.labs:
-                        self.grade_lab(student_dir, lab)
-                        print("Ocenilem " + student_dir)
+            if (student_dir in self.students or not self.students) and\
+                    os.path.isdir(os.path.join(self.root_dir, student_dir)):
+                for lab in self.labs:
+                    self.grade_lab(student_dir, lab)
+                    print("Ocenilem " + student_dir)
         self.cur_dir = self.root_dir
 
     def grade_lab(self, student_dir, lab):

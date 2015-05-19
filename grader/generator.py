@@ -73,11 +73,11 @@ class Generator:
 
     # FIXME
     def gen_samples_lab3(self, bitness):
-        in_out = {}
+        in_out = []
         for i in range(self.number_of_samples):
             num_a = random.randint(0, (2 ** bitness) - 1)
             num_b = random.randint(0, (2 ** bitness) - 1)
-            in_out[(num_a, num_b)] = self.gen_output_lab_3(num_a, num_b)
+            in_out.append({'input': [num_a, num_b], 'output': self.gen_output_lab_3(num_a, num_b)})
         return in_out
 
     def gen_samples_lab6(self, function):

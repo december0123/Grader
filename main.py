@@ -40,11 +40,10 @@ def main():
         print("Nie podano laboratorium do ocenienia!")
         return -1
 
-    students = None
     if options.csv_file is not None:
-        students = get_students_from_csv(options)
-
-    grader = Grader(options.root_dir, options.labs, students)
+        grader = Grader(options.root_dir, options.labs, get_students_from_csv(options))
+    else:
+        grader = Grader(options.root_dir, options.labs)
     grader.launch()
 
 
