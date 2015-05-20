@@ -6,11 +6,11 @@ from grader.generator import Generator
 
 
 class Grader:
-    def __init__(self, root_dir, labs, students=[]):
+    def __init__(self, root_dir, labs, csv_students=[]):
         self.labs = labs
         self.root_dir = root_dir
         self.cur_dir = os.getcwd()
-        self.students = students
+        self.csv_students = csv_students
         self.generator = Generator()
 
     @property
@@ -25,13 +25,13 @@ class Grader:
             report.write("*** Raport zbiorowy *** \n")
             report.flush()
             for student_dir in os.listdir(self.root_dir):
-                if (student_dir in self.students or not self.students) and \
+                if (student_dir in self.csv_students or not self.csv_students) and \
                         os.path.isdir(os.path.join(self.root_dir, student_dir)):
                     for lab in self.labs:
                         self.grade_lab(student_dir, lab)
                         report.write(
                             "Ocenilem " + student_dir + " na " + str(self.grade_lab(student_dir, lab)) + " punktow\n")
-                        print("Ocenilem " + student_dir + " na " + str(self.grade_lab(student_dir, lab)) + " punktow")
+                        print("Ocenilem " + student_dir + " na " + str(self.grade_lab(student_dir, lab)) + " punktow\n")
         self.cur_dir = self.root_dir
 
     def grade_lab(self, student_dir, lab):

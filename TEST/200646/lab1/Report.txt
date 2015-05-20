@@ -1,40 +1,10 @@
 
-*** 19.05.2015 22:05:46 ***
+*** 20.05.2015 10:16:30 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 
-*** 19.05.2015 22:05:46 ***
+*** 20.05.2015 10:16:30 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['RJtenv9iJp']
-Spodziewane wyjscie: RJtenv9iJp OK
-Wejscie: ['99Kt48p1h6']
-Spodziewane wyjscie: 99Kt48p1h6 OK
-Wejscie: ['09eDovnsJp']
-Spodziewane wyjscie: 09eDovnsJp OK
-Wejscie: ['BiGk2lpXrR']
-Spodziewane wyjscie: BiGk2lpXrR OK
-Wejscie: ['huz7nxkhnh']
-Spodziewane wyjscie: huz7nxkhnh OK
-Wejscie: ['8Dr2O85veD']
-Spodziewane wyjscie: 8Dr2O85veD OK
-Wejscie: ['dhIhRStyl5']
-Spodziewane wyjscie: dhIhRStyl5 OK
-Wejscie: ['45mOWcczeo']
-Spodziewane wyjscie: 45mOWcczeo OK
-Wejscie: ['9aiG0IL2qJ']
-Spodziewane wyjscie: 9aiG0IL2qJ OK
-Wejscie: ['ZaSz80PfDM']
-Spodziewane wyjscie: ZaSz80PfDM OK
-Wejscie: ['Wy9n6c39Tq']
-Spodziewane wyjscie: Wy9n6c39Tq OK
-Wejscie: ['tDfqsTQl76']
-Spodziewane wyjscie: tDfqsTQl76 OK
-Wejscie: ['PgPmjZ5UGF']
-Spodziewane wyjscie: PgPmjZ5UGF OK
-Wejscie: ['x5s7CqSRf5']
-Spodziewane wyjscie: x5s7CqSRf5 OK
-Wejscie: ['rkwAaa4BVG']
-Spodziewane wyjscie: rkwAaa4BVG OK
