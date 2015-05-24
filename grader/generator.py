@@ -85,7 +85,7 @@ class Generator:
         in_out = []
         for i in range(self.number_of_samples):
             start = random.randint(1, 100)
-            stop = random.randint(start, 100)
+            stop = random.randint(start + 1, 100)
             step = random.uniform(0.1, 1)
             in_out.append({'input': [str(start), str(stop), str(step)],
                            'output': self.gen_output_lab_6(function, start, stop, step)})
