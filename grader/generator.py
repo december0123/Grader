@@ -44,10 +44,12 @@ class Generator:
 
     @staticmethod
     def gen_output_lab_6(function, start, stop, step):
-        result = 0.0
-        for i in _frange(start, stop, step):
-            result += function(i)
-        return "%.2f" % round(result, 2)
+        return calculate_integral(function, start, stop, step)
+
+    #TODO
+    def gen_output_lab_7(function, start, stop, step):
+        result = calculate_integral(function, start, stop, step)
+        return "Wynik: " + str(result) + " Czas: "
 
     def gen_samples(self, lab):
         try:
@@ -82,13 +84,18 @@ class Generator:
     def gen_samples_lab6(self, function):
         in_out = []
         for i in range(self.number_of_samples):
-            start = random.randint(0, 100)
+            start = random.randint(1, 100)
             stop = random.randint(start, 100)
-            step = round(random.uniform(0.1, 1), 2)
+            step = random.uniform(0.1, 1)
             in_out.append({'input': [str(start), str(stop), str(step)],
                            'output': self.gen_output_lab_6(function, start, stop, step)})
         return in_out
 
+def calculate_integral(function, start, stop, step):
+    result = 0.0
+    for i in _frange(start, stop, step):
+        result += function(i)
+    return result
 
 def _random_string(length, upper=False, lower=False, digits=False):
     random_string = ''.join(

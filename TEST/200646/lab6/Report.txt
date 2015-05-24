@@ -1,0 +1,40 @@
+
+*** 24.05.2015 20:22:30 ***
+*** Student: 200646 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab6'
+make: 'lab6' jest aktualne.
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab6'
+
+*** 24.05.2015 20:22:30 ***
+*** Zaczynam testowanie projektu... *** 
+Wejscie: ['72', '85', '0.284408052995']
+Spodziewane wyjscie: 283391.653114 OK
+Wejscie: ['44', '97', '0.163226615786']
+Spodziewane wyjscie: 1688923.17518 OK
+Wejscie: ['16', '98', '0.105068580036']
+Spodziewane wyjscie: 2973643.94345 OK
+Wejscie: ['98', '100', '0.466433690812']
+Spodziewane wyjscie: 48940.7368456 OK
+Wejscie: ['17', '19', '0.144262212581']
+Spodziewane wyjscie: 4509.39197464 OK
+Wejscie: ['22', '28', '0.741676577922']
+Spodziewane wyjscie: 5643.03286526 OK
+Wejscie: ['5', '6', '0.830823366121']
+Spodziewane wyjscie: 58.9985011269 OK
+Wejscie: ['61', '89', '0.530610903559']
+Spodziewane wyjscie: 299996.239374 OK
+Wejscie: ['17', '41', '0.262103491118']
+Spodziewane wyjscie: 81433.4380752 OK
+Wejscie: ['18', '31', '0.830031348628']
+Spodziewane wyjscie: 9624.03595531 OK
+Wejscie: ['80', '99', '0.408412548359']
+Spodziewane wyjscie: 377028.696297 OK
+Wejscie: ['70', '75', '0.79416355597']
+Spodziewane wyjscie: 36692.2341681 OK
+Wejscie: ['28', '93', '0.580367967476']
+Spodziewane wyjscie: 445464.694002 OK
+Wejscie: ['70', '95', '0.787848026778']
+Spodziewane wyjscie: 217973.42519 OK
+Wejscie: ['92', '95', '0.691002205714']
+Spodziewane wyjscie: 43605.76858 OK
