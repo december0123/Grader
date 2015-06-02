@@ -6,7 +6,7 @@ import os
 from grader.grader import Grader
 
 
-def get_students_from_csv(options):
+def get_students_from_csv(csv_file):
     """
     Parses given .csv file to retrieve students' index numbers.
     Lines that contain needed numbers look like this:
@@ -16,7 +16,7 @@ def get_students_from_csv(options):
     :return: list of students
     """
 
-    file = csv.reader(open(options.csv_file), delimiter=';')
+    file = csv.reader(open(csv_file), delimiter=';')
     students = []
     for row in file:
         if '_' not in row[1]:
@@ -33,6 +33,8 @@ def main():
     parser.add_option("-L", "--lab", action="append", dest="labs", help="Labs to grade.", metavar="lab")
     parser.add_option("-C", dest="csv_file", help="CSV file with index numbers of students to grade",
                       metavar="csv_file")
+    parser.add_option("-S", "--student", action="append", dest="students", help="Students to grade.",
+                      metavar="students")
 
     (options, args) = parser.parse_args()
 
@@ -40,10 +42,12 @@ def main():
         print("Nie podano laboratorium do ocenienia!")
         return -1
 
-    if options.csv_file is None:
-        grader = Grader(options.root_dir, options.labs)
-    else:
-        grader = Grader(options.root_dir, options.labs, get_students_from_csv(options))
+    students_to_grade = []
+    if options.csv_file is not None:
+        students_to_grade = get_students_from_csv(options.csv_file)
+    if options.students is not None:
+        students_to_grade.extend(options.students)
+    grader = Grader(options.root_dir, options.labs, students_to_grade)
 
     grader.launch()
 

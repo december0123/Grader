@@ -6,7 +6,7 @@ import subprocess as sub
 from grader.generator import Generator
 
 class Grader:
-    def __init__(self, root_dir, labs, csv_students=[]):
+    def __init__(self, root_dir, labs, students_to_grade=[]):
         config = configparser.RawConfigParser()
         config.read(os.path.expanduser("~") + "/.grader/.mail_config")
         self.server = config.get("mail", "server")
@@ -17,7 +17,7 @@ class Grader:
         self.labs = labs
         self.root_dir = root_dir
         self.cur_dir = os.getcwd()
-        self.csv_students = csv_students
+        self.students_to_grade = students_to_grade
         self.generator = Generator()
 
     @property
@@ -32,7 +32,7 @@ class Grader:
             report.write("*** Raport zbiorowy *** \n")
             report.flush()
             for student_dir in os.listdir(self.root_dir):
-                if (student_dir in self.csv_students or not self.csv_students) and \
+                if (student_dir in self.students_to_grade or not self.students_to_grade) and \
                         os.path.isdir(os.path.join(self.root_dir, student_dir)):
                     for lab in self.labs:
                         points = self.grade_lab(student_dir, lab)
@@ -79,6 +79,7 @@ class Grader:
                 generator = Generator()
                 tests = generator.gen_samples(lab)
                 passed_tests = 0
+
                 for test in tests:
                     command = [self.cur_dir + "/" + lab] + test['input']
                     popen = sub.Popen(command, stdout=sub.PIPE)

@@ -91,11 +91,22 @@ class Generator:
                            'output': self.gen_output_lab_6(function, start, stop, step)})
         return in_out
 
-def calculate_integral(function, start, stop, step):
+    def gen_samples_lab7(self, function):
+        in_out = []
+        for i in range(self.number_of_samples):
+            start = random.randint(1, 100)
+            stop = random.randint(start + 1, 100)
+            step = random.uniform(0.1, 1)
+            in_out.append({'input': [str(start), str(stop), str(step)],
+                           'output': self.gen_output_lab_6(function, start, stop, step)})
+        return in_out
+
+def calculate_integral(function, start, stop, num_of_steps):
     result = 0.0
-    for i in _frange(start, stop, step):
-        result += function(i)
-    return result
+    step = (stop - start) / num_of_steps
+    for i in range(num_of_steps):
+        result += function(start + i * step)
+    return result * step
 
 def _random_string(length, upper=False, lower=False, digits=False):
     random_string = ''.join(
