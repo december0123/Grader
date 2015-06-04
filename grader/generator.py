@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.expanduser("~") + "/.grader")
 
 import lab6_function as lab6
-
+import lab7_function as lab7
 
 class Generator:
     def __init__(self):
@@ -20,14 +20,16 @@ class Generator:
         self.labs = {'lab1': self.gen_samples_lab1,
                      'lab2': self.gen_samples_lab2,
                      'lab3': self.gen_samples_lab3,
-                     'lab6': self.gen_samples_lab6}
+                     'lab6': self.gen_samples_lab6,
+                     'lab7': self.gen_samples_lab6}
         self.number_of_samples = config.getint("common", "number_of_samples")
 
         self.args = {"lab1": config.getint("lab1", "sample_length"),
                      "lab2": [config.getint("lab2", "sample_length"), config.get("lab2", "change_from"),
                               config.get("lab2", "change_to")],
                      "lab3": config.getint("lab3", "bitness"),
-                     "lab6": lab6.func}
+                     "lab6": lab6.func,
+                     "lab7": lab7.func}
 
     @staticmethod
     def gen_output_lab_1(input_string):
@@ -43,13 +45,8 @@ class Generator:
         return num_a + num_b
 
     @staticmethod
-    def gen_output_lab_6(function, start, stop, step):
-        return calculate_integral(function, start, stop, step)
-
-    #TODO
-    def gen_output_lab_7(function, start, stop, step):
-        result = calculate_integral(function, start, stop, step)
-        return "Wynik: " + str(result) + " Czas: "
+    def gen_output_lab_6(function, start, stop, num_of_steps):
+        return calculate_integral(function, start, stop, num_of_steps)
 
     def gen_samples(self, lab):
         try:
@@ -76,8 +73,8 @@ class Generator:
     def gen_samples_lab3(self, bitness):
         in_out = []
         for i in range(self.number_of_samples):
-            num_a = random.randint(0, (2 ** bitness) - 1)
-            num_b = random.randint(0, (2 ** bitness) - 1)
+            num_a = hex(random.randint(0, (2 ** bitness) - 1))
+            num_b = hex(random.randint(0, (2 ** bitness) - 1))
             in_out.append({'input': [num_a, num_b], 'output': self.gen_output_lab_3(num_a, num_b)})
         return in_out
 
@@ -85,20 +82,10 @@ class Generator:
         in_out = []
         for i in range(self.number_of_samples):
             start = random.randint(1, 100)
-            stop = random.randint(start + 1, 100)
-            step = random.uniform(0.1, 1)
-            in_out.append({'input': [str(start), str(stop), str(step)],
-                           'output': self.gen_output_lab_6(function, start, stop, step)})
-        return in_out
-
-    def gen_samples_lab7(self, function):
-        in_out = []
-        for i in range(self.number_of_samples):
-            start = random.randint(1, 100)
-            stop = random.randint(start + 1, 100)
-            step = random.uniform(0.1, 1)
-            in_out.append({'input': [str(start), str(stop), str(step)],
-                           'output': self.gen_output_lab_6(function, start, stop, step)})
+            stop = random.randint(start + 1, 200)
+            num_of_steps = 10000
+            in_out.append({'input': [str(start), str(stop), str(num_of_steps)],
+                           'output': self.gen_output_lab_6(function, start, stop, num_of_steps)})
         return in_out
 
 def calculate_integral(function, start, stop, num_of_steps):
