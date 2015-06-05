@@ -1,40 +1,43 @@
 
-*** 04.06.2015 12:51:44 ***
+*** 04.06.2015 14:07:25 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 make: 'lab2' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab2'
 
-*** 04.06.2015 12:51:44 ***
+*** 04.06.2015 14:07:25 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['IRAMQ2HsHk', 'UAJuajiI', '%']
-Spodziewane wyjscie: %R%MQ2HsHk OK
-Wejscie: ['Kryjy0zoJw', 'UAJuajiI', '%']
-Spodziewane wyjscie: Kry%y0zo%w OK
-Wejscie: ['KZ15o1GOlY', 'UAJuajiI', '%']
-Spodziewane wyjscie: KZ15o1GOlY OK
-Wejscie: ['GEh4SVnabJ', 'UAJuajiI', '%']
-Spodziewane wyjscie: GEh4SVn%b% OK
-Wejscie: ['TcccqwRDar', 'UAJuajiI', '%']
-Spodziewane wyjscie: TcccqwRD%r OK
-Wejscie: ['d62ykebeWR', 'UAJuajiI', '%']
-Spodziewane wyjscie: d62ykebeWR OK
-Wejscie: ['tlfn1FlwMq', 'UAJuajiI', '%']
-Spodziewane wyjscie: tlfn1FlwMq OK
-Wejscie: ['GaZK3aSVnU', 'UAJuajiI', '%']
-Spodziewane wyjscie: G%ZK3%SVn% OK
-Wejscie: ['qiD7VpwwQo', 'UAJuajiI', '%']
-Spodziewane wyjscie: q%D7VpwwQo OK
-Wejscie: ['NBEykBnKfV', 'UAJuajiI', '%']
-Spodziewane wyjscie: NBEykBnKfV OK
-Wejscie: ['R5uF2XQx2f', 'UAJuajiI', '%']
-Spodziewane wyjscie: R5%F2XQx2f OK
-Wejscie: ['5DqdedYH33', 'UAJuajiI', '%']
-Spodziewane wyjscie: 5DqdedYH33 OK
-Wejscie: ['xcmuXbFH72', 'UAJuajiI', '%']
-Spodziewane wyjscie: xcm%XbFH72 OK
-Wejscie: ['O3HoGmO5SY', 'UAJuajiI', '%']
-Spodziewane wyjscie: O3HoGmO5SY OK
-Wejscie: ['GI2W6JY6n3', 'UAJuajiI', '%']
-Spodziewane wyjscie: G%2W6%Y6n3 OK
+Wejscie: ['9M9Y9Z6gXx', 'UAJuajiI', '%']
+Spodziewane wyjscie: 9M9Y9Z6gXx OK
+Wejscie: ['Rn4HCA9LFl', 'UAJuajiI', '%']
+Spodziewane wyjscie: Rn4HC%9LFl OK
+Wejscie: ['pXQyvvjO4G', 'UAJuajiI', '%']
+Spodziewane wyjscie: pXQyvv%O4G OK
+Wejscie: ['78lkkdwFmY', 'UAJuajiI', '%']
+Spodziewane wyjscie: 78lkkdwFmY OK
+Wejscie: ['JufZhHFL0x', 'UAJuajiI', '%']
+Spodziewane wyjscie: %%fZhHFL0x OK
+Wejscie: ['k5gwfXYO43', 'UAJuajiI', '%']
+Spodziewane wyjscie: k5gwfXYO43 OK
+Wejscie: ['HUIqZxyTA0', 'UAJuajiI', '%']
+Spodziewane wyjscie: H%%qZxyT%0 OK
+Wejscie: ['2urSChdsCX', 'UAJuajiI', '%']
+Spodziewane wyjscie: 2%rSChdsCX OK
+Wejscie: ['Du45DVV96r', 'UAJuajiI', '%']
+Spodziewane wyjscie: D%45DVV96r OK
+Wejscie: ['iAjIFMGdCI', 'UAJuajiI', '%']
+Spodziewane wyjscie: %%%%FMGdC% OK
+Wejscie: ['19NWY2c7d2', 'UAJuajiI', '%']
+Spodziewane wyjscie: 19NWY2c7d2 OK
+Wejscie: ['cDtpNSTEwZ', 'UAJuajiI', '%']
+Spodziewane wyjscie: cDtpNSTEwZ OK
+Wejscie: ['iA6elvZm6e', 'UAJuajiI', '%']
+Spodziewane wyjscie: %%6elvZm6e OK
+Wejscie: ['OJbopWRwwP', 'UAJuajiI', '%']
+Spodziewane wyjscie: O%bopWRwwP OK
+Wejscie: ['MZ1u8A8xHw', 'UAJuajiI', '%']
+Spodziewane wyjscie: MZ1%8%8xHw OK
+
+
+Zdobyte punkty: 5.0

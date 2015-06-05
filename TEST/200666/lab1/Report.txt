@@ -1,43 +1,43 @@
 
-*** 04.06.2015 13:22:55 ***
+*** 04.06.2015 14:04:48 ***
 *** Student: 200666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
 
-*** 04.06.2015 13:22:55 ***
+*** 04.06.2015 14:04:48 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['4onH3O6im3']
-Spodziewane wyjscie: 4onH3O6im3 OK
-Wejscie: ['me2o245kYs']
-Spodziewane wyjscie: me2o245kYs OK
-Wejscie: ['pJX0dYxdFX']
-Spodziewane wyjscie: pJX0dYxdFX OK
-Wejscie: ['pgHSAgAG8u']
-Spodziewane wyjscie: pgHSAgAG8u OK
-Wejscie: ['lXk1c17U01']
-Spodziewane wyjscie: lXk1c17U01 OK
-Wejscie: ['cE5hPcOlTb']
-Spodziewane wyjscie: cE5hPcOlTb OK
-Wejscie: ['qrw2tV2jhJ']
-Spodziewane wyjscie: qrw2tV2jhJ OK
-Wejscie: ['3e7Lx4Iy9y']
-Spodziewane wyjscie: 3e7Lx4Iy9y OK
-Wejscie: ['NE9TjXXkZg']
-Spodziewane wyjscie: NE9TjXXkZg OK
-Wejscie: ['syZadvuFGA']
-Spodziewane wyjscie: syZadvuFGA OK
-Wejscie: ['gk7OYmQr4K']
-Spodziewane wyjscie: gk7OYmQr4K OK
-Wejscie: ['OLH9ZqXPv9']
-Spodziewane wyjscie: OLH9ZqXPv9 OK
-Wejscie: ['GStSNKATbD']
-Spodziewane wyjscie: GStSNKATbD OK
-Wejscie: ['Paj0hWRvxN']
-Spodziewane wyjscie: Paj0hWRvxN OK
-Wejscie: ['whiyaXqwvH']
-Spodziewane wyjscie: whiyaXqwvH OK
+Wejscie: ['mPPwsEv75N']
+Spodziewane wyjscie: mPPwsEv75N OK
+Wejscie: ['0tbmnWAQQv']
+Spodziewane wyjscie: 0tbmnWAQQv OK
+Wejscie: ['JM1h10n5WJ']
+Spodziewane wyjscie: JM1h10n5WJ OK
+Wejscie: ['5KOSOWJLQL']
+Spodziewane wyjscie: 5KOSOWJLQL OK
+Wejscie: ['mOw7PnsclS']
+Spodziewane wyjscie: mOw7PnsclS OK
+Wejscie: ['eToY35ll6Z']
+Spodziewane wyjscie: eToY35ll6Z OK
+Wejscie: ['MQVGIc0pAr']
+Spodziewane wyjscie: MQVGIc0pAr OK
+Wejscie: ['HD4GtRrQ6z']
+Spodziewane wyjscie: HD4GtRrQ6z OK
+Wejscie: ['Daur9OjEZB']
+Spodziewane wyjscie: Daur9OjEZB OK
+Wejscie: ['Ht0WWwi9yA']
+Spodziewane wyjscie: Ht0WWwi9yA OK
+Wejscie: ['aXVMaHjhfV']
+Spodziewane wyjscie: aXVMaHjhfV OK
+Wejscie: ['elg7UaC7ku']
+Spodziewane wyjscie: elg7UaC7ku OK
+Wejscie: ['ZbblWvwJwc']
+Spodziewane wyjscie: ZbblWvwJwc OK
+Wejscie: ['4UJ2GPEl7F']
+Spodziewane wyjscie: 4UJ2GPEl7F OK
+Wejscie: ['EzPrlROL2N']
+Spodziewane wyjscie: EzPrlROL2N OK
 
 
 Zdobyte punkty: 5.0

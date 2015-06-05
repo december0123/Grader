@@ -14,7 +14,7 @@ class Grader:
         self.username = config.get("mail", "username")
         self.password = config.get("mail", "password")
         config.read(os.path.expanduser("~") + "/.grader/.gen_config")
-        self.acceptable_error = config.getfloat("common", "acceptable_error_for_float")
+        self.acceptable_error = config.getfloat("common", "acceptable_error")
         self.labs = labs
         self.root_dir = root_dir
         self.cur_dir = os.getcwd()
@@ -48,11 +48,10 @@ class Grader:
         self.cur_dir = os.path.join(self.root_dir, student_dir, lab)
         points = 0
         if self.build_project(student_dir):
-            points += 0.5
             try:
-                points += self.test_project(lab)
+                points = self.test_project(lab)
             except OSError as e:
-                print(e)
+                print("Zgloszono wyjatek o tresci: ", e)
         return points
 
     def build_project(self, student_dir):
@@ -66,64 +65,59 @@ class Grader:
                 popen.communicate()
                 if popen.returncode == 0:
                     return True
-                return False
         except IOError as e:
             print("Zgloszono wyjatek o tresci: ", e)
-            return False
+        return False
 
     def test_project(self, lab):
-        try:
-            with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
-                report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
-                report.write("*** Zaczynam testowanie projektu... *** \n")
-                report.flush()
-                generator = Generator()
+        with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
+            report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** Zaczynam testowanie projektu... *** \n")
+            report.flush()
 
-                tests = generator.gen_samples(lab)
-                passed_tests = 0
+            tests = self.generator.gen_samples(lab)
+            passed_tests = 0
 
-                for test in tests:
-                    command = [self.cur_dir + "/" + lab] + test['input']
-                    popen = sub.Popen(command, stdout=sub.PIPE)
-                    output = popen.stdout.read().decode("utf-8")
-                    popen.communicate()
-                    line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
-                    if lab != "lab7":
-                        if self._relative_error(test['output'], output) <= self.acceptable_error:
-                            report.write(line + " OK\n")
-                            passed_tests += 1
-                        else:
-                            report.write(line + " BLAD\n")
-                            report.write("Otrzymane wyjscie: " + str(output) + "\n")
+            for test in tests:
+                command = [self.cur_dir + "/" + lab] + test['input']
+                popen = sub.Popen(command, stdout=sub.PIPE)
+                output = popen.stdout.read().decode("utf-8")
+                popen.communicate()
+                line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
+                if lab != "lab7":
+                    if self._relative_error(test['output'], output) <= self.acceptable_error:
+                        report.write(line + " OK\n")
+                        passed_tests += 1
                     else:
-                        # such regexp
-                        # wow
-                        regexp = re.compile(r'(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)')
-                        m = re.match(regexp, output)
-                        if self._relative_error(test['output'], m.group(2)) <= self.acceptable_error:
-                            report.write(line + " OK\n")
-                            passed_tests += 0.5
-                        else:
-                            report.write(line + " BLAD\n")
-                            report.write("Otrzymane wyjscie: " + str(output) + "\n")
-                        cycles = float(m.group(4))
-                        if cycles <= 10e6:
-                            passed_tests += 0.5
-                            report.write("+0.5 pkt za liczbe cykli w granicy 10e6.\n")
-                        elif cycles <= 10e9:
-                            passed_tests += 0.3
-                            report.write("+0.3 pkt za liczbe cykli w granicy 10e9.\n")
-                        elif cycles <= 10e12:
-                            passed_tests += 0.1
-                            report.write("+0.1 pkt za liczbe cykli w granicy 10e12.\n")
-                        else:
-                            report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
-                report.write("\n\nZdobyte punkty: ")
-                points = 4.5 * (passed_tests / len(tests)) + 0.5
-                report.write(str(points))
-            return points
-        except IOError as e:
-            print(e)
+                        report.write(line + " BLAD\n")
+                        report.write("Otrzymane wyjscie: " + str(output) + "\n")
+                else:
+                    # such regexp
+                    # wow
+                    regexp = re.compile(r'(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)')
+                    m = re.match(regexp, output)
+                    if self._relative_error(test['output'], m.group(2)) <= self.acceptable_error:
+                        report.write(line + " OK\n")
+                        passed_tests += 0.5
+                    else:
+                        report.write(line + " BLAD\n")
+                        report.write("Otrzymane wyjscie: " + str(output) + "\n")
+                    cycles = float(m.group(4))
+                    if cycles <= 10e6:
+                        passed_tests += 0.5
+                        report.write("+0.5 pkt za liczbe cykli w granicy 10e6.\n")
+                    elif cycles <= 10e9:
+                        passed_tests += 0.3
+                        report.write("+0.3 pkt za liczbe cykli w granicy 10e9.\n")
+                    elif cycles <= 10e12:
+                        passed_tests += 0.1
+                        report.write("+0.1 pkt za liczbe cykli w granicy 10e12.\n")
+                    else:
+                        report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
+            points = 4.5 * (passed_tests / len(tests)) + 0.5  # + 0.5 for successful build
+            report.write("\n\nZdobyte punkty: ")
+            report.write(str(points))
+        return points
 
     def _relative_error(self, model, actual):
         import math

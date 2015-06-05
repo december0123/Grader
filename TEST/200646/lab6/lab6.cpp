@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-long double fun(double x)
+long double fun(long double x)
 {
     return x * x;
 }

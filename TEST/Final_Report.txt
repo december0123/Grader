@@ -1,4 +1,8 @@
 
-*** 04.06.2015 13:22:59 ***
+*** 04.06.2015 14:07:25 ***
 *** Raport zbiorowy *** 
-Ocenilem 200646 na 5.5 punktow za lab1
+Ocenilem 200646 na 5.0 punktow za lab1
+Ocenilem 200646 na 5.0 punktow za lab2
+Ocenilem 200646 na 0 punktow za lab3
+Ocenilem 200646 na 5.0 punktow za lab6
+Ocenilem 200646 na 4.46 punktow za lab7

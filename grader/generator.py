@@ -12,6 +12,7 @@ sys.path.append(os.path.expanduser("~") + "/.grader")
 import lab6_function as lab6
 import lab7_function as lab7
 
+
 class Generator:
     def __init__(self):
         config = configparser.RawConfigParser()
@@ -88,12 +89,14 @@ class Generator:
                            'output': self.gen_output_lab_6(function, start, stop, num_of_steps)})
         return in_out
 
+
 def calculate_integral(function, start, stop, num_of_steps):
     result = 0.0
     step = (stop - start) / num_of_steps
     for i in range(num_of_steps):
         result += function(start + i * step)
     return result * step
+
 
 def _random_string(length, upper=False, lower=False, digits=False):
     random_string = ''.join(
