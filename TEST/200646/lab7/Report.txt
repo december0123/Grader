@@ -1,73 +1,73 @@
-*** 07.06.2015 16:36:28 ***
+*** 08.06.2015 00:08:06 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab7'
 make: 'lab7' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab7'
 
-*** 07.06.2015 16:36:28 ***
+*** 08.06.2015 00:08:06 ***
 *** Zaczynam testowanie projektu... *** 
 
-Wejscie: ['48', '128', '10000']
-Spodziewane wyjscie: 662130.34752 OK
+Wejscie: ['48', '191', '10000']
+Spodziewane wyjscie: 2285515.30599 OK
 +0.5 pkt za liczbe cykli w granicy 10e6.
 
-Wejscie: ['89', '98', '10000']
-Spodziewane wyjscie: 78740.2426512 OK
-+0.5 pkt za liczbe cykli w granicy 10e6.
-
-Wejscie: ['92', '132', '10000']
-Spodziewane wyjscie: 507075.41344 OK
+Wejscie: ['18', '135', '10000']
+Spodziewane wyjscie: 818076.281819 OK
 +0.1 pkt za liczbe cykli w granicy 10e12.
 
-Wejscie: ['22', '47', '10000']
-Spodziewane wyjscie: 31056.1771094 OK
-+0.3 pkt za liczbe cykli w granicy 10e9.
-
-Wejscie: ['9', '184', '10000']
-Spodziewane wyjscie: 2075962.81102 OK
-+0.5 pkt za liczbe cykli w granicy 10e6.
-
-Wejscie: ['83', '123', '10000']
-Spodziewane wyjscie: 429676.85344 OK
-+0.5 pkt za liczbe cykli w granicy 10e6.
-
-Wejscie: ['91', '136', '10000']
-Spodziewane wyjscie: 587272.016402 OK
-+0.3 pkt za liczbe cykli w granicy 10e9.
-
-Wejscie: ['94', '178', '10000']
-Spodziewane wyjscie: 1602960.03939 OK
-+0.3 pkt za liczbe cykli w granicy 10e9.
-
-Wejscie: ['92', '139', '10000']
-Spodziewane wyjscie: 635618.15289 OK
-+0.5 pkt za liczbe cykli w granicy 10e6.
-
-Wejscie: ['43', '85', '10000']
-Spodziewane wyjscie: 178194.710523 OK
-+0.5 pkt za liczbe cykli w granicy 10e6.
-
-Wejscie: ['83', '117', '10000']
-Spodziewane wyjscie: 343263.773399 OK
-+0.3 pkt za liczbe cykli w granicy 10e9.
-
-Wejscie: ['1', '81', '10000']
-Spodziewane wyjscie: 177120.42752 OK
+Wejscie: ['46', '64', '10000']
+Spodziewane wyjscie: 54934.2180097 OK
 +0.1 pkt za liczbe cykli w granicy 10e12.
 
-Wejscie: ['33', '132', '10000']
-Spodziewane wyjscie: 754596.143367 OK
+Wejscie: ['42', '118', '10000']
+Spodziewane wyjscie: 522935.126065 OK
++0.3 pkt za liczbe cykli w granicy 10e9.
+
+Wejscie: ['98', '157', '10000']
+Spodziewane wyjscie: 976189.284259 OK
 +0.5 pkt za liczbe cykli w granicy 10e6.
 
-Wejscie: ['95', '176', '10000']
-Spodziewane wyjscie: 1531378.09934 OK
+Wejscie: ['15', '194', '10000']
+Spodziewane wyjscie: 2432334.84778 OK
 +0.1 pkt za liczbe cykli w granicy 10e12.
 
-Wejscie: ['49', '119', '10000']
-Spodziewane wyjscie: 522462.173905 OK
+Wejscie: ['78', '133', '10000']
+Spodziewane wyjscie: 625996.419861 OK
++0.3 pkt za liczbe cykli w granicy 10e9.
+
+Wejscie: ['4', '124', '10000']
+Spodziewane wyjscie: 635427.84288 OK
 +0.1 pkt za liczbe cykli w granicy 10e12.
 
-*** 07.06.2015 16:36:28 ***
+Wejscie: ['51', '194', '10000']
+Spodziewane wyjscie: 2389327.17129 OK
++0.3 pkt za liczbe cykli w granicy 10e9.
+
+Wejscie: ['10', '51', '10000']
+Spodziewane wyjscie: 43878.5397315 OK
++0.5 pkt za liczbe cykli w granicy 10e6.
+
+Wejscie: ['43', '119', '10000']
+Spodziewane wyjscie: 535170.548465 OK
++0.1 pkt za liczbe cykli w granicy 10e12.
+
+Wejscie: ['100', '129', '10000']
+Spodziewane wyjscie: 382220.037257 OK
++0.3 pkt za liczbe cykli w granicy 10e9.
+
+Wejscie: ['54', '153', '10000']
+Spodziewane wyjscie: 1141269.56127 OK
++0.1 pkt za liczbe cykli w granicy 10e12.
+
+Wejscie: ['51', '121', '10000']
+Spodziewane wyjscie: 546261.193905 OK
++0.1 pkt za liczbe cykli w granicy 10e12.
+
+Wejscie: ['88', '137', '10000']
+Spodziewane wyjscie: 629933.322279 OK
++0.1 pkt za liczbe cykli w granicy 10e12.
+
+*** 08.06.2015 00:08:06 ***
 *** Zdobyte punkty ***
-4.28 / 5.0
+3.8 / 5.0

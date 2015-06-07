@@ -1,4 +1,4 @@
-*** 07.06.2015 16:36:28 ***
+*** 08.06.2015 00:08:07 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
@@ -12,54 +12,54 @@ make[1]: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3
 make[1]: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
 
-*** 07.06.2015 16:36:28 ***
+*** 08.06.2015 00:08:08 ***
 *** Zaczynam testowanie projektu... *** 
 
-Wejscie: ['0x4c8f9a9c52ee55f4', '0x7141a66c7f470d21']
-Spodziewane wyjscie: 0xbdd14108d2356315 OK
+Wejscie: ['0x7c27bc9fc727ea36', '0x5c622654f7542b77']
+Spodziewane wyjscie: 0xd889e2f4be7c15ad OK
 
-Wejscie: ['0x1e3abc4e4764e391', '0x270f3b3e8df2bf74']
-Spodziewane wyjscie: 0x4549f78cd557a305 OK
+Wejscie: ['0x56ced63831cab4a1', '0x75918417affead41']
+Spodziewane wyjscie: 0xcc605a4fe1c961e2 OK
 
-Wejscie: ['0x1dd2d1b72720e49', '0x4eab7ba05eafb5']
-Spodziewane wyjscie: 0x22bd89712d0bdfe OK
+Wejscie: ['0x7d870f1cfcedd0', '0x69008b7415783915']
+Spodziewane wyjscie: 0x697e1283327526e5 OK
 
-Wejscie: ['0x49b1eb7cbc396199', '0x2072556d88406a6a']
-Spodziewane wyjscie: 0x6a2440ea4479cc03 OK
+Wejscie: ['0x715d3a11edeae7b4', '0x2876af3b2bfd56f8']
+Spodziewane wyjscie: 0x99d3e94d19e83eac OK
 
-Wejscie: ['0x26c9b7bd3fd76980', '0x136030b7790c5da3']
-Spodziewane wyjscie: 0x3a29e874b8e3c723 OK
+Wejscie: ['0x73f2d96b1dab2487', '0x17e60113c623a022']
+Spodziewane wyjscie: 0x8bd8da7ee3cec4a9 OK
 
-Wejscie: ['0x6582394140e9703d', '0xbe88f24a1eb52fa']
-Spodziewane wyjscie: 0x716ac865e2d4c337 OK
+Wejscie: ['0x3801df12542cb6ea', '0x1bc50b4953624193']
+Spodziewane wyjscie: 0x53c6ea5ba78ef87d OK
 
-Wejscie: ['0x7e6ce2eda6154fd3', '0x574bf445413e7a02']
-Spodziewane wyjscie: 0xd5b8d732e753c9d5 OK
+Wejscie: ['0x376a2259010245f0', '0x73c8ecac9f963f68']
+Spodziewane wyjscie: 0xab330f05a0988558 OK
 
-Wejscie: ['0x2d38af6584062d3a', '0x4fda17024740fc7f']
-Spodziewane wyjscie: 0x7d12c667cb4729b9 OK
+Wejscie: ['0xe5a35371c3b8737', '0x16a2f24297b9b2f3']
+Spodziewane wyjscie: 0x24fd2779b3f53a2a OK
 
-Wejscie: ['0x350022027ab7d2e8', '0x14368b5d464f320d']
-Spodziewane wyjscie: 0x4936ad5fc10704f5 OK
+Wejscie: ['0x7b515129c09c1306', '0x593e4d15758fe8c8']
+Spodziewane wyjscie: 0xd48f9e3f362bfbce OK
 
-Wejscie: ['0x655e2b23f3cc9786', '0x704526cc4f060ee4']
-Spodziewane wyjscie: 0xd5a351f042d2a66a OK
+Wejscie: ['0x7c72f457eaf161ca', '0x13b10228bbd1454d']
+Spodziewane wyjscie: 0x9023f680a6c2a717 OK
 
-Wejscie: ['0x6dd56d932bb736fa', '0x56dcf08dfd2a55d0']
-Spodziewane wyjscie: 0xc4b25e2128e18cca OK
+Wejscie: ['0x147eaf797a2dd198', '0x134be83ccf85ae22']
+Spodziewane wyjscie: 0x27ca97b649b37fba OK
 
-Wejscie: ['0x29e21e1812698905', '0x48ebc742f5e3e91c']
-Spodziewane wyjscie: 0x72cde55b084d7221 OK
+Wejscie: ['0x63058a787a761035', '0x7bfcba47bb05e8ab']
+Spodziewane wyjscie: 0xdf0244c0357bf8e0 OK
 
-Wejscie: ['0x19fdd2a935549d29', '0x3b5e3b890bae6000']
-Spodziewane wyjscie: 0x555c0e324102fd29 OK
+Wejscie: ['0x10acccc600cc913f', '0x5ee5c506bf8f27bf']
+Spodziewane wyjscie: 0x6f9291ccc05bb8fe OK
 
-Wejscie: ['0x37ae0b37451a4b38', '0x192b27bf3482b056']
-Spodziewane wyjscie: 0x50d932f6799cfb8e OK
+Wejscie: ['0x4b8079cafbc9ac9e', '0x48aba6e03416824']
+Spodziewane wyjscie: 0x500b3438ff0b14c2 OK
 
-Wejscie: ['0x639b61b0ccb0dd61', '0xc0525caf9fab8b0']
-Spodziewane wyjscie: 0x6fa0877bc6ab9611 OK
+Wejscie: ['0x5f6f5c58684dd655', '0x6752ef80d463b5b2']
+Spodziewane wyjscie: 0xc6c24bd93cb18c07 OK
 
-*** 07.06.2015 16:36:29 ***
+*** 08.06.2015 00:08:08 ***
 *** Zdobyte punkty ***
 5.0 / 5.0

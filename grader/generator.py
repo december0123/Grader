@@ -29,7 +29,7 @@ class Generator:
                               config.get("lab2", "change_from"),
                               config.get("lab2", "change_to")],
                      "lab3": [config.getint("lab3", "bitness"),
-                              config.get("lab3", "op")],
+                              config.get("lab3", "operation")],
                      "lab6": lab6.func,
                      "lab7": lab7.func}
 
@@ -51,8 +51,8 @@ class Generator:
         return re.sub("[" + change_from + "]", change_into, input_string)
 
     @staticmethod
-    def gen_output_lab_3(num_a, num_b, op):
-        result = hex(num_a) + op + hex(num_b)
+    def gen_output_lab_3(num_a, num_b, operation):
+        result = hex(num_a) + operation + hex(num_b)
         return hex(eval(result))
 
     @staticmethod

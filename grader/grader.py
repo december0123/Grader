@@ -7,6 +7,7 @@ import subprocess as sub
 from grader.generator import Generator
 from grader.utilities import calc_relative_error
 
+
 class Grader:
     def __init__(self, root_dir, labs, students_to_grade=[]):
         config = configparser.RawConfigParser()
@@ -42,7 +43,13 @@ class Grader:
                                      str(points) + " punktow za " + lab + "\n")
                         print("Ocenilem " + student_dir + " na " +
                               str(points) + " punktow za " + lab + "\n")
-                        # self.send_mail(self.username, student_dir + "@student.pwr.edu.pl", "TEST", "TEST PLEASE IGNORE")
+                        try:
+                            self.send_mail(self.username, student_dir, "Oceniono zadanie",
+                                       "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab + "\nLiczba punktow: " + str(
+                                           points))
+                        except Exception as e:
+                            print("Wystapil blad podczas wysylania maila!")
+                            print(e)
         print("**************************************************************")
         print("Zakonczono ocenianie. Raport zbiorowy znajduje sie w pliku: ")
         print(os.path.join(self.root_dir, "Final_Report.txt"))
@@ -142,17 +149,15 @@ class Grader:
         return points
 
     def send_mail(self, FROM, TO, SUBJECT, TEXT):
+        from email.mime.text import MIMEText
         import smtplib
-        message = """\
-            From: From Witam <witam@witam.pl> %s
-            To: To Pozdrawiam %s
-            Subject: %s
-            %s
-            """ % (FROM, TO, SUBJECT, TEXT)
+
+        msg = MIMEText(TEXT)
+        msg['Subject'] = SUBJECT
+        msg['From'], msg['To'] = FROM, TO + "@student.pwr.edu.pl"
+
         server = smtplib.SMTP(self.server)
         server.starttls()
         server.login(self.username, self.password)
-        server.sendmail(FROM, TO, "uszanowanko")
+        server.sendmail(msg['From'], msg['To'], msg.as_string())
         server.quit()
-
-
