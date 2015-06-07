@@ -31,8 +31,10 @@ def frange(start, stop, step):
         yield start
         start += step
 
+
 def calc_relative_error(model, actual):
     import math
+
     try:
         return math.fabs(model - float(actual)) / model
     except ValueError as e:
@@ -41,4 +43,3 @@ def calc_relative_error(model, actual):
             if model[i] == actual[i]:
                 correct_letters += 1
         return 1 - correct_letters / len(model)
-

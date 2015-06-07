@@ -12,6 +12,7 @@ import lab7_function as lab7
 
 import grader.utilities as util
 
+
 class Generator:
     def __init__(self, number_of_samples=None, sample_length=None):
         config = configparser.RawConfigParser()
