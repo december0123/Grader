@@ -40,10 +40,9 @@ class Generator:
     def gen_output_lab_2(input_string, change_from, change_into):
         return re.sub("[" + change_from + "]", change_into, input_string)
 
-    # FIXME
     @staticmethod
     def gen_output_lab_3(num_a, num_b):
-        return num_a + num_b
+        return hex(num_a + num_b)
 
     @staticmethod
     def gen_output_lab_6(function, start, stop, num_of_steps):
@@ -70,13 +69,12 @@ class Generator:
                            'output': self.gen_output_lab_2(random_string, change_from, change_to)})
         return in_out
 
-    # FIXME
     def gen_samples_lab3(self, bitness):
         in_out = []
         for i in range(self.number_of_samples):
-            num_a = hex(random.randint(0, (2 ** bitness) - 1))
-            num_b = hex(random.randint(0, (2 ** bitness) - 1))
-            in_out.append({'input': [num_a, num_b], 'output': self.gen_output_lab_3(num_a, num_b)})
+            num_a = random.randint(0, 2 ** (bitness - 1))
+            num_b = random.randint(0, 2 ** (bitness - 1))
+            in_out.append({'input': [hex(num_a), hex(num_b)], 'output': self.gen_output_lab_3(num_a, num_b)})
         return in_out
 
     def gen_samples_lab6(self, function):

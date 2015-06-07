@@ -1,43 +1,43 @@
 
-*** 04.06.2015 14:07:25 ***
+*** 07.06.2015 12:12:20 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 
-*** 04.06.2015 14:07:25 ***
+*** 07.06.2015 12:12:20 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['Eh2lpUi4T8']
-Spodziewane wyjscie: Eh2lpUi4T8 OK
-Wejscie: ['YjfBKfSDYb']
-Spodziewane wyjscie: YjfBKfSDYb OK
-Wejscie: ['2wULSyGj0y']
-Spodziewane wyjscie: 2wULSyGj0y OK
-Wejscie: ['wMfVKJkMpH']
-Spodziewane wyjscie: wMfVKJkMpH OK
-Wejscie: ['yRHQu6PqcI']
-Spodziewane wyjscie: yRHQu6PqcI OK
-Wejscie: ['NfC3UGibS1']
-Spodziewane wyjscie: NfC3UGibS1 OK
-Wejscie: ['SHAHGHYDXV']
-Spodziewane wyjscie: SHAHGHYDXV OK
-Wejscie: ['91xHxipJbc']
-Spodziewane wyjscie: 91xHxipJbc OK
-Wejscie: ['xWYa5Ky5rq']
-Spodziewane wyjscie: xWYa5Ky5rq OK
-Wejscie: ['z3zzUBORVu']
-Spodziewane wyjscie: z3zzUBORVu OK
-Wejscie: ['xdjwwlaMxN']
-Spodziewane wyjscie: xdjwwlaMxN OK
-Wejscie: ['jleYT6AF9w']
-Spodziewane wyjscie: jleYT6AF9w OK
-Wejscie: ['Vpl9Y0iHSc']
-Spodziewane wyjscie: Vpl9Y0iHSc OK
-Wejscie: ['F7zjNJ5oay']
-Spodziewane wyjscie: F7zjNJ5oay OK
-Wejscie: ['GnlNDZNSHg']
-Spodziewane wyjscie: GnlNDZNSHg OK
+Wejscie: ['hf9M1xPEE7']
+Spodziewane wyjscie: hf9M1xPEE7 OK
+Wejscie: ['Ld8Dc7v8sG']
+Spodziewane wyjscie: Ld8Dc7v8sG OK
+Wejscie: ['hNAoxCiKMO']
+Spodziewane wyjscie: hNAoxCiKMO OK
+Wejscie: ['2cQohvoXw0']
+Spodziewane wyjscie: 2cQohvoXw0 OK
+Wejscie: ['WOCdzgWg9o']
+Spodziewane wyjscie: WOCdzgWg9o OK
+Wejscie: ['iusJzOQMjK']
+Spodziewane wyjscie: iusJzOQMjK OK
+Wejscie: ['qSVgCW9556']
+Spodziewane wyjscie: qSVgCW9556 OK
+Wejscie: ['BK6SR29D4D']
+Spodziewane wyjscie: BK6SR29D4D OK
+Wejscie: ['EUWxw6xuQj']
+Spodziewane wyjscie: EUWxw6xuQj OK
+Wejscie: ['0Kd6czqykk']
+Spodziewane wyjscie: 0Kd6czqykk OK
+Wejscie: ['m62bkLtaoC']
+Spodziewane wyjscie: m62bkLtaoC OK
+Wejscie: ['k49EK28iY1']
+Spodziewane wyjscie: k49EK28iY1 OK
+Wejscie: ['NNJyMkZgja']
+Spodziewane wyjscie: NNJyMkZgja OK
+Wejscie: ['pawveoR2iq']
+Spodziewane wyjscie: pawveoR2iq OK
+Wejscie: ['NyHoqwh08j']
+Spodziewane wyjscie: NyHoqwh08j OK
 
 
 Zdobyte punkty: 5.0

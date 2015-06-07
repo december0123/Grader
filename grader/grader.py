@@ -79,9 +79,12 @@ class Grader:
             passed_tests = 0
 
             for test in tests:
+                print(test['input'])
+                print(test['output'])
                 command = [self.cur_dir + "/" + lab] + test['input']
                 popen = sub.Popen(command, stdout=sub.PIPE)
                 output = popen.stdout.read().decode("utf-8")
+                print(output)
                 popen.communicate()
                 line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
                 if lab != "lab7":
