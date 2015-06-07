@@ -6,6 +6,7 @@ import subprocess as sub
 
 from grader.generator import Generator
 
+
 class Grader:
     def __init__(self, root_dir, labs, students_to_grade=[]):
         config = configparser.RawConfigParser()
@@ -52,26 +53,31 @@ class Grader:
     def grade_lab(self, student_dir, lab):
         self.cur_dir = os.path.join(self.root_dir, student_dir, lab)
         points = 0
-        if self.build_project(student_dir):
-            try:
+        try:
+            if self.build_project(student_dir):
                 points = self.test_project(lab)
-            except OSError as e:
-                print("Zgloszono wyjatek o tresci: ", e)
+
+            with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
+                report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+                report.write("*** Zdobyte punkty ***\n")
+                report.write(str(points))
+                report.flush()
+        except OSError as e:
+            print("Zgloszono wyjatek o tresci: ", e)
+        except IOError as e:
+            print("Zgloszono wyjatek o tresci: ", e)
         return points
 
     def build_project(self, student_dir):
-        try:
-            with open(os.path.join(self.cur_dir, "Report.txt"), "w") as report:
-                report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
-                report.write("*** Student: " + student_dir + " ***\n")
-                report.write("*** Zaczynam budowanie projektu... *** \n")
-                report.flush()
-                popen = sub.Popen(["make", "-C" + self.cur_dir], stdout=report, stderr=report)
-                popen.communicate()
-                if popen.returncode == 0:
-                    return True
-        except IOError as e:
-            print("Zgloszono wyjatek o tresci: ", e)
+        with open(os.path.join(self.cur_dir, "Report.txt"), "w") as report:
+            report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** Student: " + student_dir + " ***\n")
+            report.write("*** Zaczynam budowanie projektu... *** \n")
+            report.flush()
+            popen = sub.Popen(["make", "-C" + self.cur_dir], stdout=report, stderr=report)
+            popen.communicate()
+            if popen.returncode == 0:
+                return True
         return False
 
     def test_project(self, lab):
@@ -91,7 +97,7 @@ class Grader:
                 output = popen.stdout.read().decode("utf-8")
                 # print(output)
                 popen.communicate()
-                line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
+                line = "\nWejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
                 if lab != "lab7":
                     if calc_relative_error(test['output'], output) <= self.acceptable_error:
                         report.write(line + " OK\n")
@@ -124,9 +130,6 @@ class Grader:
                     else:
                         report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
             points = 4.5 * (passed_tests / len(tests)) + 0.5  # + 0.5 for successful build
-            report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
-            report.write("*** Zdobyte punkty ***\n")
-            report.write(str(points))
         return points
 
     def send_mail(self, FROM, TO, SUBJECT, TEXT):

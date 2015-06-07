@@ -1,43 +1,58 @@
-*** 07.06.2015 14:36:09 ***
+*** 07.06.2015 15:39:37 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 
-*** 07.06.2015 14:36:09 ***
+*** 07.06.2015 15:39:37 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['AntJz1vZmh']
-Spodziewane wyjscie: AntJz1vZmh OK
-Wejscie: ['bJH0yPHA0L']
-Spodziewane wyjscie: bJH0yPHA0L OK
-Wejscie: ['BPhUKbUkrw']
-Spodziewane wyjscie: BPhUKbUkrw OK
-Wejscie: ['rxX7nBKip0']
-Spodziewane wyjscie: rxX7nBKip0 OK
-Wejscie: ['3Qv5JYWn2W']
-Spodziewane wyjscie: 3Qv5JYWn2W OK
-Wejscie: ['hnVSZYUz40']
-Spodziewane wyjscie: hnVSZYUz40 OK
-Wejscie: ['4gcHOW7b5o']
-Spodziewane wyjscie: 4gcHOW7b5o OK
-Wejscie: ['CqDyvhkjYk']
-Spodziewane wyjscie: CqDyvhkjYk OK
-Wejscie: ['EpgiocOKbI']
-Spodziewane wyjscie: EpgiocOKbI OK
-Wejscie: ['J45j0CL8BO']
-Spodziewane wyjscie: J45j0CL8BO OK
-Wejscie: ['pNrvB6iTxr']
-Spodziewane wyjscie: pNrvB6iTxr OK
-Wejscie: ['O0KKRrFvXm']
-Spodziewane wyjscie: O0KKRrFvXm OK
-Wejscie: ['lm6wvjaE7B']
-Spodziewane wyjscie: lm6wvjaE7B OK
-Wejscie: ['26D7Uk9Kyp']
-Spodziewane wyjscie: 26D7Uk9Kyp OK
-Wejscie: ['lUpE6rv0cR']
-Spodziewane wyjscie: lUpE6rv0cR OK
 
-*** 07.06.2015 14:36:09 ***
+Wejscie: ['5krFGNh9Ru']
+Spodziewane wyjscie: 5krFGNh9Ru OK
+
+Wejscie: ['chgOWQkuwe']
+Spodziewane wyjscie: chgOWQkuwe OK
+
+Wejscie: ['fpx14WvzIf']
+Spodziewane wyjscie: fpx14WvzIf OK
+
+Wejscie: ['Bon80p1RLj']
+Spodziewane wyjscie: Bon80p1RLj OK
+
+Wejscie: ['9g6WiH53To']
+Spodziewane wyjscie: 9g6WiH53To OK
+
+Wejscie: ['TiPucFoJe6']
+Spodziewane wyjscie: TiPucFoJe6 OK
+
+Wejscie: ['LCJPPJcVqB']
+Spodziewane wyjscie: LCJPPJcVqB OK
+
+Wejscie: ['JzRKgm2GTn']
+Spodziewane wyjscie: JzRKgm2GTn OK
+
+Wejscie: ['B1JkYCnMVJ']
+Spodziewane wyjscie: B1JkYCnMVJ OK
+
+Wejscie: ['nO6xlgYmdn']
+Spodziewane wyjscie: nO6xlgYmdn OK
+
+Wejscie: ['MTVLHJHWMt']
+Spodziewane wyjscie: MTVLHJHWMt OK
+
+Wejscie: ['XYIYSmkoaz']
+Spodziewane wyjscie: XYIYSmkoaz OK
+
+Wejscie: ['cjlrN59Ay4']
+Spodziewane wyjscie: cjlrN59Ay4 OK
+
+Wejscie: ['EHmObS50TR']
+Spodziewane wyjscie: EHmObS50TR OK
+
+Wejscie: ['UrtXDovGTt']
+Spodziewane wyjscie: UrtXDovGTt OK
+
+*** 07.06.2015 15:39:37 ***
 *** Zdobyte punkty ***
 5.0

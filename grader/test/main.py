@@ -4,15 +4,9 @@ __author__ = 'dec'
 import os
 import re
 import unittest
-import sys
 
 from grader.grader import Grader
 from grader.generator import Generator
-
-sys.path.append(os.path.expanduser("~") + "/.grader")
-import lab6_function as lab6
-import lab7_function as lab7
-
 
 class TestGenerator(unittest.TestCase):
     def setUp(self):

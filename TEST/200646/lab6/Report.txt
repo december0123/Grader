@@ -1,43 +1,58 @@
-*** 07.06.2015 14:36:10 ***
+*** 07.06.2015 15:39:38 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab6'
 make: 'lab6' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab6'
 
-*** 07.06.2015 14:36:10 ***
+*** 07.06.2015 15:39:38 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['73', '86', '10000']
-Spodziewane wyjscie: 82344.989787 OK
-Wejscie: ['26', '176', '10000']
-Spodziewane wyjscie: 1811172.75562 OK
-Wejscie: ['21', '93', '10000']
-Spodziewane wyjscie: 265002.451822 OK
-Wejscie: ['29', '136', '10000']
-Spodziewane wyjscie: 830261.214458 OK
-Wejscie: ['43', '191', '10000']
-Spodziewane wyjscie: 2295865.06194 OK
-Wejscie: ['32', '165', '10000']
-Spodziewane wyjscie: 1486278.1006 OK
-Wejscie: ['86', '184', '10000']
-Spodziewane wyjscie: 1864353.01424 OK
-Wejscie: ['52', '130', '10000']
-Spodziewane wyjscie: 685408.636391 OK
-Wejscie: ['85', '112', '10000']
-Spodziewane wyjscie: 263593.819383 OK
-Wejscie: ['75', '111', '10000']
-Spodziewane wyjscie: 315239.947278 OK
-Wejscie: ['98', '165', '10000']
-Spodziewane wyjscie: 1183585.30348 OK
-Wejscie: ['33', '72', '10000']
-Spodziewane wyjscie: 112429.014849 OK
-Wejscie: ['86', '143', '10000']
-Spodziewane wyjscie: 762679.799259 OK
-Wejscie: ['54', '154', '10000']
-Spodziewane wyjscie: 1164829.335 OK
-Wejscie: ['3', '73', '10000']
-Spodziewane wyjscie: 129644.713905 OK
 
-*** 07.06.2015 14:36:10 ***
+Wejscie: ['39', '185', '10000']
+Spodziewane wyjscie: 2090529.93265 OK
+
+Wejscie: ['26', '73', '10000']
+Spodziewane wyjscie: 123802.73229 OK
+
+Wejscie: ['40', '154', '10000']
+Spodziewane wyjscie: 1195961.94127 OK
+
+Wejscie: ['46', '157', '10000']
+Spodziewane wyjscie: 1257393.94413 OK
+
+Wejscie: ['76', '173', '10000']
+Spodziewane wyjscie: 1579463.1928 OK
+
+Wejscie: ['38', '197', '10000']
+Spodziewane wyjscie: 2529869.95495 OK
+
+Wejscie: ['77', '184', '10000']
+Spodziewane wyjscie: 1924174.25926 OK
+
+Wejscie: ['14', '190', '10000']
+Spodziewane wyjscie: 2285102.72055 OK
+
+Wejscie: ['70', '76', '10000']
+Spodziewane wyjscie: 31991.7372004 OK
+
+Wejscie: ['51', '77', '10000']
+Spodziewane wyjscie: 107956.340296 OK
+
+Wejscie: ['11', '138', '10000']
+Spodziewane wyjscie: 875460.175697 OK
+
+Wejscie: ['46', '108', '10000']
+Spodziewane wyjscie: 387429.068264 OK
+
+Wejscie: ['3', '82', '10000']
+Spodziewane wyjscie: 183753.809905 OK
+
+Wejscie: ['35', '69', '10000']
+Spodziewane wyjscie: 95205.3221988 OK
+
+Wejscie: ['72', '197', '10000']
+Spodziewane wyjscie: 2423831.51367 OK
+
+*** 07.06.2015 15:39:38 ***
 *** Zdobyte punkty ***
 5.0
