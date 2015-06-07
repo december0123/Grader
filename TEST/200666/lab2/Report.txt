@@ -1,4 +1,4 @@
-*** 07.06.2015 13:28:13 ***
+*** 07.06.2015 13:36:21 ***
 *** Student: 200666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab2'

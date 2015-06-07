@@ -4,14 +4,13 @@ import configparser
 import os
 import random
 import re
-import string
 import sys
 
 sys.path.append(os.path.expanduser("~") + "/.grader")
 
 import lab6_function as lab6
 import lab7_function as lab7
-
+import grader.Utilities as U
 
 class Generator:
     def __init__(self, number_of_samples=None, sample_length=None):
@@ -55,7 +54,7 @@ class Generator:
 
     @staticmethod
     def gen_output_lab_6(function, start, stop, num_of_steps):
-        return calculate_integral(function, start, stop, num_of_steps)
+        return U.calculate_integral(function, start, stop, num_of_steps)
 
     def gen_samples(self, lab):
         try:
@@ -66,14 +65,14 @@ class Generator:
     def gen_samples_lab1(self, sample_length):
         in_out = []
         for i in range(self.number_of_samples):
-            random_string = _random_string(sample_length, upper=True, lower=True, digits=True)
+            random_string = U.get_random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string], 'output': self.gen_output_lab_1(random_string)})
         return in_out
 
     def gen_samples_lab2(self, sample_length, change_from, change_to):
         in_out = []
         for i in range(self.number_of_samples):
-            random_string = _random_string(sample_length, upper=True, lower=True, digits=True)
+            random_string = U.get_random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string, change_from, change_to],
                            'output': self.gen_output_lab_2(random_string, change_from, change_to)})
         return in_out
@@ -95,31 +94,3 @@ class Generator:
             in_out.append({'input': [str(start), str(stop), str(num_of_steps)],
                            'output': self.gen_output_lab_6(function, start, stop, num_of_steps)})
         return in_out
-
-
-def calculate_integral(function, start, stop, num_of_steps):
-    result = 0.0
-    step = (stop - start) / num_of_steps
-    for i in range(num_of_steps):
-        result += function(start + i * step)
-    return result * step
-
-
-def _random_string(length, upper=False, lower=False, digits=False):
-    random_string = ''.join(
-        random.SystemRandom().choice((string.ascii_lowercase if upper else "") +
-                                     (string.ascii_uppercase if lower else "") +
-                                     (string.digits if digits else "")) for _ in range(length))
-    return random_string
-
-
-def _frange(start, stop, step):
-    """
-    Generator that produces numbers in range <start; stop> with step
-    :param start:
-    :param stop:
-    :param step:
-    """
-    while start <= stop:
-        yield start
-        start += step
