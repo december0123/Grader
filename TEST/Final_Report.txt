@@ -1,6 +1,3 @@
-*** 08.06.2015 00:10:06 ***
+*** 08.06.2015 00:13:55 ***
 *** Raport zbiorowy *** 
-Ocenilem 666 na 5.0 punktow za lab1
-Ocenilem 666 na 0 punktow za lab6
-Ocenilem 666 na 0 punktow za lab7
-Ocenilem 666 na 0.5 punktow za lab3
+Ocenilem 666 na 0.5 punktow za lab7

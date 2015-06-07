@@ -1,0 +1,58 @@
+*** 08.06.2015 00:10:06 ***
+*** Student: 666 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab1'
+make: 'lab1' jest aktualne.
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab1'
+
+*** 08.06.2015 00:10:06 ***
+*** Zaczynam testowanie projektu... *** 
+
+Wejscie: ['JyYuAk8ACw']
+Spodziewane wyjscie: JyYuAk8ACw OK
+
+Wejscie: ['u1bkQcTBxN']
+Spodziewane wyjscie: u1bkQcTBxN OK
+
+Wejscie: ['t36kEh2fv1']
+Spodziewane wyjscie: t36kEh2fv1 OK
+
+Wejscie: ['AGzqIiNomr']
+Spodziewane wyjscie: AGzqIiNomr OK
+
+Wejscie: ['TRiha9OK58']
+Spodziewane wyjscie: TRiha9OK58 OK
+
+Wejscie: ['Txz1QNIFwk']
+Spodziewane wyjscie: Txz1QNIFwk OK
+
+Wejscie: ['U02JIhFfiw']
+Spodziewane wyjscie: U02JIhFfiw OK
+
+Wejscie: ['vgsP0eULHo']
+Spodziewane wyjscie: vgsP0eULHo OK
+
+Wejscie: ['z1fS6DRvSD']
+Spodziewane wyjscie: z1fS6DRvSD OK
+
+Wejscie: ['sSXbRmTnGG']
+Spodziewane wyjscie: sSXbRmTnGG OK
+
+Wejscie: ['MbrqBfwjeT']
+Spodziewane wyjscie: MbrqBfwjeT OK
+
+Wejscie: ['a2Zq1B2drU']
+Spodziewane wyjscie: a2Zq1B2drU OK
+
+Wejscie: ['lp1zxja0eK']
+Spodziewane wyjscie: lp1zxja0eK OK
+
+Wejscie: ['QSTcAlCN7p']
+Spodziewane wyjscie: QSTcAlCN7p OK
+
+Wejscie: ['6O9LJwagic']
+Spodziewane wyjscie: 6O9LJwagic OK
+
+*** 08.06.2015 00:10:06 ***
+*** Zdobyte punkty ***
+5.0 / 5.0

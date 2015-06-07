@@ -1,0 +1,73 @@
+*** 08.06.2015 00:10:08 ***
+*** Student: 666 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab3'
+make: 'lab3' jest aktualne.
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab3'
+
+*** 08.06.2015 00:10:08 ***
+*** Zaczynam testowanie projektu... *** 
+
+Wejscie: ['0x7f5fb5b6bbb4e3c3', '0x537966996aa94d7e']
+Spodziewane wyjscie: 0xd2d91c50265e3141 BLAD
+Otrzymane wyjscie: 0x7f5fb5b6bbb4e3c3
+
+Wejscie: ['0x2a7b475243169dde', '0x5ef5407e583feab2']
+Spodziewane wyjscie: 0x897087d09b568890 BLAD
+Otrzymane wyjscie: 0x2a7b475243169dde
+
+Wejscie: ['0x2cbb2f6e34510532', '0x6f8e7b14805ffbb1']
+Spodziewane wyjscie: 0x9c49aa82b4b100e3 BLAD
+Otrzymane wyjscie: 0x2cbb2f6e34510532
+
+Wejscie: ['0x6c88307ac1cc8a0c', '0x2fb9c5d61e601ab4']
+Spodziewane wyjscie: 0x9c41f650e02ca4c0 BLAD
+Otrzymane wyjscie: 0x6c88307ac1cc8a0c
+
+Wejscie: ['0x5b399b6aeefdc1bd', '0x585da9fa407964a3']
+Spodziewane wyjscie: 0xb39745652f772660 BLAD
+Otrzymane wyjscie: 0x5b399b6aeefdc1bd
+
+Wejscie: ['0x496bbced1a87c507', '0x26dc750595b5ca29']
+Spodziewane wyjscie: 0x704831f2b03d8f30 BLAD
+Otrzymane wyjscie: 0x496bbced1a87c507
+
+Wejscie: ['0x1e76c6ecd4dc3476', '0x21f1799f96c5391a']
+Spodziewane wyjscie: 0x4068408c6ba16d90 BLAD
+Otrzymane wyjscie: 0x1e76c6ecd4dc3476
+
+Wejscie: ['0x1ce8df7cf516279', '0x5c26812ecb53df']
+Spodziewane wyjscie: 0x22ab478fe1cb658 BLAD
+Otrzymane wyjscie: 0x1ce8df7cf516279
+
+Wejscie: ['0x1f29ac515b631869', '0x249b9b87eb9cbff']
+Spodziewane wyjscie: 0x21736609da1ce468 BLAD
+Otrzymane wyjscie: 0x1f29ac515b631869
+
+Wejscie: ['0x35104630ae29bf83', '0x4134dfedb213511d']
+Spodziewane wyjscie: 0x7645261e603d10a0 BLAD
+Otrzymane wyjscie: 0x35104630ae29bf83
+
+Wejscie: ['0x384b616806209ca0', '0x7e761a1e98bdde65']
+Spodziewane wyjscie: 0xb6c17b869ede7b05 BLAD
+Otrzymane wyjscie: 0x384b616806209ca0
+
+Wejscie: ['0x1a310fe0cbbaac6d', '0x441fdf7a25887ca']
+Spodziewane wyjscie: 0x1e730dd86e133437 BLAD
+Otrzymane wyjscie: 0x1a310fe0cbbaac6d
+
+Wejscie: ['0x6e16275b906b5d80', '0x2227da67f76b032b']
+Spodziewane wyjscie: 0x903e01c387d660ab BLAD
+Otrzymane wyjscie: 0x6e16275b906b5d80
+
+Wejscie: ['0x52f980b20f787322', '0x71d00ca4ca6a4e04']
+Spodziewane wyjscie: 0xc4c98d56d9e2c126 BLAD
+Otrzymane wyjscie: 0x52f980b20f787322
+
+Wejscie: ['0x2e8560c0e1ad491f', '0x621133868a07c7ba']
+Spodziewane wyjscie: 0x909694476bb510d9 BLAD
+Otrzymane wyjscie: 0x2e8560c0e1ad491f
+
+*** 08.06.2015 00:10:08 ***
+*** Zdobyte punkty ***
+0.5 / 5.0

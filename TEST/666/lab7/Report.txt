@@ -1,0 +1,13 @@
+*** 08.06.2015 00:13:55 ***
+*** Student: 666 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab7'
+make: 'lab7' jest aktualne.
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab7'
+
+*** 08.06.2015 00:13:55 ***
+*** Zaczynam testowanie projektu... *** 
+
+*** 08.06.2015 00:13:55 ***
+*** Zdobyte punkty ***
+0.5 / 5.0
