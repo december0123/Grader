@@ -14,7 +14,7 @@ import lab7_function as lab7
 
 
 class Generator:
-    def __init__(self):
+    def __init__(self, number_of_samples=None, sample_length=None):
         config = configparser.RawConfigParser()
         config.read(os.path.expanduser("~") + "/.grader/.gen_config")
 
@@ -23,14 +23,23 @@ class Generator:
                      'lab3': self.gen_samples_lab3,
                      'lab6': self.gen_samples_lab6,
                      'lab7': self.gen_samples_lab6}
-        self.number_of_samples = config.getint("common", "number_of_samples")
 
         self.args = {"lab1": config.getint("lab1", "sample_length"),
-                     "lab2": [config.getint("lab2", "sample_length"), config.get("lab2", "change_from"),
+                     "lab2": [config.getint("lab2", "sample_length"),
+                              config.get("lab2", "change_from"),
                               config.get("lab2", "change_to")],
                      "lab3": config.getint("lab3", "bitness"),
                      "lab6": lab6.func,
                      "lab7": lab7.func}
+
+        if number_of_samples is None:
+            self.number_of_samples = config.getint("common", "number_of_samples")
+        else:
+            self.number_of_samples = number_of_samples
+
+        if sample_length is not None:
+            self.args["lab1"] = sample_length
+            self.args["lab2"][0] = sample_length
 
     @staticmethod
     def gen_output_lab_1(input_string):

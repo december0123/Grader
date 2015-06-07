@@ -29,7 +29,7 @@ class Grader:
 
     def launch(self):
         with open(os.path.join(self.root_dir, "Final_Report.txt"), "w") as report:
-            report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Raport zbiorowy *** \n")
             report.flush()
             for student_dir in os.listdir(self.root_dir):
@@ -41,7 +41,12 @@ class Grader:
                                      str(points) + " punktow za " + lab + "\n")
                         print("Ocenilem " + student_dir + " na " +
                               str(points) + " punktow za " + lab + "\n")
-                        # self._send_mail(self.username, student_dir + "@student.pwr.edu.pl", "TEST", "TEST PLEASE IGNORE")
+                        # self.send_mail(self.username, student_dir + "@student.pwr.edu.pl", "TEST", "TEST PLEASE IGNORE")
+        print("**************************************************************")
+        print("Zakonczono ocenianie. Raport zbiorowy znajduje sie w pliku: ")
+        print(os.path.join(self.root_dir, "Final_Report.txt"))
+        print("Szczegolowe informacje znajduja sie w katalogach z zadaniami.")
+        print("**************************************************************")
         self.cur_dir = self.root_dir
 
     def grade_lab(self, student_dir, lab):
@@ -57,7 +62,7 @@ class Grader:
     def build_project(self, student_dir):
         try:
             with open(os.path.join(self.cur_dir, "Report.txt"), "w") as report:
-                report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+                report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
                 report.write("*** Student: " + student_dir + " ***\n")
                 report.write("*** Zaczynam budowanie projektu... *** \n")
                 report.flush()
@@ -79,16 +84,16 @@ class Grader:
             passed_tests = 0
 
             for test in tests:
-                print(test['input'])
-                print(test['output'])
+                # print(test['input'])
+                # print(test['output'])
                 command = [self.cur_dir + "/" + lab] + test['input']
                 popen = sub.Popen(command, stdout=sub.PIPE)
                 output = popen.stdout.read().decode("utf-8")
-                print(output)
+                # print(output)
                 popen.communicate()
                 line = "Wejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
                 if lab != "lab7":
-                    if self._relative_error(test['output'], output) <= self.acceptable_error:
+                    if calc_relative_error(test['output'], output) <= self.acceptable_error:
                         report.write(line + " OK\n")
                         passed_tests += 1
                     else:
@@ -97,9 +102,10 @@ class Grader:
                 else:
                     # such regexp
                     # wow
+                    # matches "SOMETHING: POSSIBLY_FLOATING_POINT_NUMBER SOMETHING: INTEGER"
                     regexp = re.compile(r'(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)')
                     m = re.match(regexp, output)
-                    if self._relative_error(test['output'], m.group(2)) <= self.acceptable_error:
+                    if calc_relative_error(test['output'], m.group(2)) <= self.acceptable_error:
                         report.write(line + " OK\n")
                         passed_tests += 0.5
                     else:
@@ -118,22 +124,12 @@ class Grader:
                     else:
                         report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
             points = 4.5 * (passed_tests / len(tests)) + 0.5  # + 0.5 for successful build
-            report.write("\n\nZdobyte punkty: ")
+            report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
+            report.write("*** Zdobyte punkty ***\n")
             report.write(str(points))
         return points
 
-    def _relative_error(self, model, actual):
-        import math
-        try:
-            return math.fabs(model - float(actual)) / model
-        except ValueError as e:
-            correct_letters = 0
-            for i in range(0, len(model)):
-                if model[i] == actual[i]:
-                    correct_letters += 1
-            return 1 - correct_letters / len(model)
-
-    def _send_mail(self, FROM, TO, SUBJECT, TEXT):
+    def send_mail(self, FROM, TO, SUBJECT, TEXT):
         import smtplib
         message = """\
             From: From Witam <witam@witam.pl> %s
@@ -146,3 +142,16 @@ class Grader:
         server.login(self.username, self.password)
         server.sendmail(FROM, TO, "uszanowanko")
         server.quit()
+
+
+def calc_relative_error(model, actual):
+    import math
+    try:
+        return math.fabs(model - float(actual)) / model
+    except ValueError as e:
+        correct_letters = 0
+        for i in range(0, len(model)):
+            if model[i] == actual[i]:
+                correct_letters += 1
+        return 1 - correct_letters / len(model)
+
