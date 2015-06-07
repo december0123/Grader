@@ -1,11 +1,17 @@
 #!/usr/bin/env python3.1
 __author__ = 'dec'
 
-from grader.grader import Grader
-from grader.generator import Generator
 import os
 import re
 import unittest
+import sys
+
+from grader.grader import Grader
+from grader.generator import Generator
+
+sys.path.append(os.path.expanduser("~") + "/.grader")
+import lab6_function as lab6
+import lab7_function as lab7
 
 
 class TestGenerator(unittest.TestCase):
@@ -45,22 +51,30 @@ class TestGenerator(unittest.TestCase):
     def test_lab_3_gen_output_for_given_input(self):
         num_a = 9
         num_b = 1
-        self.assertEqual("0xa", Generator.gen_output_lab_3(num_a, num_b))
+        op = "+"
+        self.assertEqual("0xa", Generator.gen_output_lab_3(num_a, num_b, op))
 
     def test_lab_3_gen_dict_of_inputs_and_outputs(self):
         bitness = 256
-        in_out = self.g.gen_samples_lab3(bitness)
+        op = "+"
+        in_out = self.g.gen_samples_lab3(bitness, op)
         self.assertEqual(len(in_out), self.num_of_samples)
         for test in in_out:
-            self.assertEqual(int(test['output'], 16), int(test['input'][0], 16) + (int(test['input'][1], 16)))
+            self.assertEqual(int(test['output'], 16),
+                             eval(str(int(test['input'][0], 16)) + op + str((int(test['input'][1], 16)))))
 
     def test_lab_6_gen_output_for_given_input(self):
-        start = 0
-        end = 1
-        step = 1
-        def function():
-            pass
-        # self.assertEqual(1, Generator.gen_output_lab_6())
+        start = 1
+        stop = 3
+        num_of_steps = 10000
+        result = 8.6666
+
+        def func(x):
+            return x ** 2
+
+        self.assertAlmostEqual(result,
+                               Generator.gen_output_lab_6(function=func, start=start, stop=stop,
+                                                          num_of_steps=num_of_steps), places=2)
 
 
 class TestGrader(unittest.TestCase):
@@ -97,6 +111,7 @@ class TestGrader(unittest.TestCase):
             pattern = r"^\*{3} \d{2}\.\d{2}\.\d{4} \d{2}:\d{2}:\d{2} \*{3}$"  # matches "*** dd.mm.yyyy hh:mm:ss ***"
             r = re.compile(pattern)
             self.assertTrue(r.match(line))
+
 
 if __name__ == "__main__":
     unittest.main()

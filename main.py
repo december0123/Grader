@@ -26,12 +26,12 @@ def get_students_from_csv(csv_file):
 
 
 def main():
-    parser = OptionParser(usage="%prog [options] <arguments>", version="%prog 0.1")
+    parser = OptionParser(usage="%prog [options] <arguments>", version="%prog 0.7")
     parser.add_option("-D", "--directory", dest="root_dir", default=os.getcwd(),
                       help="Root directory with students' directories. Defaults to current working directory.",
                       metavar="root_dir")
     parser.add_option("-L", "--lab", action="append", dest="labs", help="Lab to grade.", metavar="lab")
-    parser.add_option("-C", "--csv", dest="csv_file", help="CSV file with index numbers of students to grade",
+    parser.add_option("-C", "--csv", dest="csv_file", help=".csv file with index numbers of students to grade",
                       metavar="csv_file")
     parser.add_option("-S", "--student", action="append", dest="students", help="Student to grade.",
                       metavar="student")

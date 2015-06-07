@@ -1,43 +1,43 @@
-*** 07.06.2015 13:36:52 ***
+*** 07.06.2015 14:36:10 ***
 *** Student: 200666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200666/lab1'
 
-*** 07.06.2015 13:36:52 ***
+*** 07.06.2015 14:36:10 ***
 *** Zaczynam testowanie projektu... *** 
-Wejscie: ['sr1kf9W2AF']
-Spodziewane wyjscie: sr1kf9W2AF OK
-Wejscie: ['zOmgyyG6k0']
-Spodziewane wyjscie: zOmgyyG6k0 OK
-Wejscie: ['S3S7Qx0RWO']
-Spodziewane wyjscie: S3S7Qx0RWO OK
-Wejscie: ['rPl2J7hEQ5']
-Spodziewane wyjscie: rPl2J7hEQ5 OK
-Wejscie: ['OX7Bsq7Z7B']
-Spodziewane wyjscie: OX7Bsq7Z7B OK
-Wejscie: ['crwqplEoF2']
-Spodziewane wyjscie: crwqplEoF2 OK
-Wejscie: ['MbV7smljNl']
-Spodziewane wyjscie: MbV7smljNl OK
-Wejscie: ['Mw7WPOUNVr']
-Spodziewane wyjscie: Mw7WPOUNVr OK
-Wejscie: ['FwZJ1faFUY']
-Spodziewane wyjscie: FwZJ1faFUY OK
-Wejscie: ['lYMe5sbjwI']
-Spodziewane wyjscie: lYMe5sbjwI OK
-Wejscie: ['JCPQMru25m']
-Spodziewane wyjscie: JCPQMru25m OK
-Wejscie: ['BWN3NRWo9K']
-Spodziewane wyjscie: BWN3NRWo9K OK
-Wejscie: ['vtnValho25']
-Spodziewane wyjscie: vtnValho25 OK
-Wejscie: ['N5ixMAIy4z']
-Spodziewane wyjscie: N5ixMAIy4z OK
-Wejscie: ['ECS9vvSIEU']
-Spodziewane wyjscie: ECS9vvSIEU OK
+Wejscie: ['XXqnZfKMD0']
+Spodziewane wyjscie: XXqnZfKMD0 OK
+Wejscie: ['JQGFwx3IKf']
+Spodziewane wyjscie: JQGFwx3IKf OK
+Wejscie: ['dtXsPjQBfs']
+Spodziewane wyjscie: dtXsPjQBfs OK
+Wejscie: ['QePgED9Vb2']
+Spodziewane wyjscie: QePgED9Vb2 OK
+Wejscie: ['7wsZbJkf0u']
+Spodziewane wyjscie: 7wsZbJkf0u OK
+Wejscie: ['BNxXZxiyGc']
+Spodziewane wyjscie: BNxXZxiyGc OK
+Wejscie: ['rLK2AOTQWz']
+Spodziewane wyjscie: rLK2AOTQWz OK
+Wejscie: ['CadR6w8ENB']
+Spodziewane wyjscie: CadR6w8ENB OK
+Wejscie: ['RmXQOTH92t']
+Spodziewane wyjscie: RmXQOTH92t OK
+Wejscie: ['aXh1jE02Rw']
+Spodziewane wyjscie: aXh1jE02Rw OK
+Wejscie: ['0nusmg3NC7']
+Spodziewane wyjscie: 0nusmg3NC7 OK
+Wejscie: ['69db1du1KH']
+Spodziewane wyjscie: 69db1du1KH OK
+Wejscie: ['HD0FrV39pT']
+Spodziewane wyjscie: HD0FrV39pT OK
+Wejscie: ['LjppW9sUVg']
+Spodziewane wyjscie: LjppW9sUVg OK
+Wejscie: ['UT0BRwz6sA']
+Spodziewane wyjscie: UT0BRwz6sA OK
 
-*** 07.06.2015 13:36:52 ***
+*** 07.06.2015 14:36:10 ***
 *** Zdobyte punkty ***
 5.0

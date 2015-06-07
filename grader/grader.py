@@ -103,7 +103,7 @@ class Grader:
                     # such regexp
                     # wow
                     # matches "SOMETHING: POSSIBLY_FLOATING_POINT_NUMBER SOMETHING: INTEGER"
-                    regexp = re.compile(r'(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)')
+                    regexp = re.compile(r"(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)")
                     m = re.match(regexp, output)
                     if calc_relative_error(test['output'], m.group(2)) <= self.acceptable_error:
                         report.write(line + " OK\n")
