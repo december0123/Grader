@@ -10,7 +10,7 @@ sys.path.append(os.path.expanduser("~") + "/.grader")
 
 import lab6_function as lab6
 import lab7_function as lab7
-import grader.Utilities as U
+import grader.utilities as U
 
 class Generator:
     def __init__(self, number_of_samples=None, sample_length=None):
