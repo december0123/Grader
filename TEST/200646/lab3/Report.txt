@@ -1,0 +1,65 @@
+*** 07.06.2015 16:36:28 ***
+*** Student: 200646 ***
+*** Zaczynam budowanie projektu... *** 
+make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+make clean
+make[1]: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+rm -f lab3
+make[1]: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+make lab3
+make[1]: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+/usr/bin/clang++ lab3.cpp -o lab3 -std=c++14
+make[1]: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab3'
+
+*** 07.06.2015 16:36:28 ***
+*** Zaczynam testowanie projektu... *** 
+
+Wejscie: ['0x4c8f9a9c52ee55f4', '0x7141a66c7f470d21']
+Spodziewane wyjscie: 0xbdd14108d2356315 OK
+
+Wejscie: ['0x1e3abc4e4764e391', '0x270f3b3e8df2bf74']
+Spodziewane wyjscie: 0x4549f78cd557a305 OK
+
+Wejscie: ['0x1dd2d1b72720e49', '0x4eab7ba05eafb5']
+Spodziewane wyjscie: 0x22bd89712d0bdfe OK
+
+Wejscie: ['0x49b1eb7cbc396199', '0x2072556d88406a6a']
+Spodziewane wyjscie: 0x6a2440ea4479cc03 OK
+
+Wejscie: ['0x26c9b7bd3fd76980', '0x136030b7790c5da3']
+Spodziewane wyjscie: 0x3a29e874b8e3c723 OK
+
+Wejscie: ['0x6582394140e9703d', '0xbe88f24a1eb52fa']
+Spodziewane wyjscie: 0x716ac865e2d4c337 OK
+
+Wejscie: ['0x7e6ce2eda6154fd3', '0x574bf445413e7a02']
+Spodziewane wyjscie: 0xd5b8d732e753c9d5 OK
+
+Wejscie: ['0x2d38af6584062d3a', '0x4fda17024740fc7f']
+Spodziewane wyjscie: 0x7d12c667cb4729b9 OK
+
+Wejscie: ['0x350022027ab7d2e8', '0x14368b5d464f320d']
+Spodziewane wyjscie: 0x4936ad5fc10704f5 OK
+
+Wejscie: ['0x655e2b23f3cc9786', '0x704526cc4f060ee4']
+Spodziewane wyjscie: 0xd5a351f042d2a66a OK
+
+Wejscie: ['0x6dd56d932bb736fa', '0x56dcf08dfd2a55d0']
+Spodziewane wyjscie: 0xc4b25e2128e18cca OK
+
+Wejscie: ['0x29e21e1812698905', '0x48ebc742f5e3e91c']
+Spodziewane wyjscie: 0x72cde55b084d7221 OK
+
+Wejscie: ['0x19fdd2a935549d29', '0x3b5e3b890bae6000']
+Spodziewane wyjscie: 0x555c0e324102fd29 OK
+
+Wejscie: ['0x37ae0b37451a4b38', '0x192b27bf3482b056']
+Spodziewane wyjscie: 0x50d932f6799cfb8e OK
+
+Wejscie: ['0x639b61b0ccb0dd61', '0xc0525caf9fab8b0']
+Spodziewane wyjscie: 0x6fa0877bc6ab9611 OK
+
+*** 07.06.2015 16:36:29 ***
+*** Zdobyte punkty ***
+5.0 / 5.0

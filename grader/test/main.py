@@ -13,17 +13,17 @@ from grader.utilities import calc_relative_error
 
 class TestGenerator(unittest.TestCase):
     def setUp(self):
-        self.num_of_samples = 7
+        self.number_of_tests = 7
         self.sample_length = 7
-        self.g = Generator(number_of_samples=self.num_of_samples, sample_length=self.sample_length)
+        self.g = Generator(number_of_tests=self.number_of_tests, sample_length=self.sample_length)
 
     def test_lab_1_gen_output_for_given_input(self):
         input_string = "test"
         self.assertEqual(input_string, Generator.gen_output_lab_1(input_string))
 
     def test_lab_1_gen_dict_of_inputs_and_outputs(self):
-        in_out = self.g.gen_samples_lab1(self.sample_length)
-        self.assertEqual(len(in_out), self.num_of_samples)
+        in_out = self.g.gen_tests_lab1(self.sample_length)
+        self.assertEqual(len(in_out), self.number_of_tests)
         for test in in_out:
             self.assertEqual(test["input"][0], test["output"])
             self.assertEqual(len(test["input"][0]), self.sample_length)
@@ -38,8 +38,8 @@ class TestGenerator(unittest.TestCase):
     def test_lab_2_gen_dict_of_inputs_and_outputs(self):
         change_from = "AIEUOY"
         change_into = "&"
-        in_out = self.g.gen_samples_lab2(self.sample_length, change_from, change_into)
-        self.assertEqual(len(in_out), self.num_of_samples)
+        in_out = self.g.gen_tests_lab2(self.sample_length, change_from, change_into)
+        self.assertEqual(len(in_out), self.number_of_tests)
         for test in in_out:
             for char in test["input"][1]:
                 self.failIf(char in change_from and char in test["output"], "Znaki nie zostaly zmienione")
@@ -54,8 +54,8 @@ class TestGenerator(unittest.TestCase):
     def test_lab_3_gen_dict_of_inputs_and_outputs(self):
         bitness = 256
         op = "+"
-        in_out = self.g.gen_samples_lab3(bitness, op)
-        self.assertEqual(len(in_out), self.num_of_samples)
+        in_out = self.g.gen_tests_lab3(bitness, op)
+        self.assertEqual(len(in_out), self.number_of_tests)
         for test in in_out:
             self.assertEqual(int(test['output'], 16),
                              eval(str(int(test['input'][0], 16)) + op + str(int(test['input'][1], 16))))

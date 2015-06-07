@@ -10,11 +10,11 @@ from grader.utilities import calc_relative_error
 class Grader:
     def __init__(self, root_dir, labs, students_to_grade=[]):
         config = configparser.RawConfigParser()
-        config.read(os.path.expanduser("~") + "/.grader/.mail_config")
+        config.read(os.path.expanduser("~") + "/.grader/mail_config")
         self.server = config.get("mail", "server")
         self.username = config.get("mail", "username")
         self.password = config.get("mail", "password")
-        config.read(os.path.expanduser("~") + "/.grader/.gen_config")
+        config.read(os.path.expanduser("~") + "/.grader/gen_config")
         self.acceptable_error = config.getfloat("common", "acceptable_error")
         self.labs = labs
         self.root_dir = root_dir
@@ -60,7 +60,7 @@ class Grader:
             with open(os.path.join(self.cur_dir, "Report.txt"), "a") as report:
                 report.write("\n*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
                 report.write("*** Zdobyte punkty ***\n")
-                report.write(str(points))
+                report.write(str(points) + " / 5.0")
                 report.flush()
         except OSError as e:
             print("Zgloszono wyjatek o tresci: ", e)
@@ -86,7 +86,7 @@ class Grader:
             report.write("*** Zaczynam testowanie projektu... *** \n")
             report.flush()
 
-            tests = self.generator.gen_samples(lab)
+            tests = self.generator.gen_tests(lab)
             passed_tests = 0
 
             for test in tests:
@@ -99,19 +99,28 @@ class Grader:
                 popen.communicate()
                 line = "\nWejscie: " + str(test['input']) + "\nSpodziewane wyjscie: " + str(test['output'])
                 if lab != "lab7":
-                    if calc_relative_error(test['output'], output) <= self.acceptable_error:
-                        report.write(line + " OK\n")
-                        passed_tests += 1
-                    else:
-                        report.write(line + " BLAD\n")
-                        report.write("Otrzymane wyjscie: " + str(output) + "\n")
+                    try:
+                        error = calc_relative_error(test['output'], output)
+                        if error <= self.acceptable_error:
+                            report.write(line + " OK\n")
+                            passed_tests += 1
+                        else:
+                            report.write(line + " BLAD\n")
+                            report.write("Otrzymane wyjscie: " + str(output) + "\n")
+                    except:
+                        return 0.5
+
                 else:
                     # such regexp
                     # wow
                     # matches "SOMETHING: POSSIBLY_FLOATING_POINT_NUMBER SOMETHING: INTEGER"
                     regexp = re.compile(r"(.*:\s)(\d+\.?\d+?)\s(.*:\s)(\d+)")
                     m = re.match(regexp, output)
-                    if calc_relative_error(test['output'], m.group(2)) <= self.acceptable_error:
+                    try:
+                        error = calc_relative_error(test['output'], m.group(2))
+                    except:
+                        return 0.5
+                    if error <= self.acceptable_error:
                         report.write(line + " OK\n")
                         passed_tests += 0.5
                     else:

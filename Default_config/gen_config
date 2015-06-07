@@ -1,0 +1,22 @@
+[common]
+# How many tests are ran per lab
+number_of_tests: 15
+
+# How much can the output be different from test output (relative error)
+acceptable_error = 0.01
+
+[lab1]
+# length of test string
+sample_length: 10
+
+[lab2]
+# length of test string
+sample_length: 10
+
+change_from: UAJuajiI
+change_to: %
+
+[lab3]
+bitness: 64
+operation: +
+

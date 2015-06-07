@@ -14,15 +14,15 @@ import grader.utilities as util
 
 
 class Generator:
-    def __init__(self, number_of_samples=None, sample_length=None):
+    def __init__(self, number_of_tests=None, sample_length=None):
         config = configparser.RawConfigParser()
-        config.read(os.path.expanduser("~") + "/.grader/.gen_config")
+        config.read(os.path.expanduser("~") + "/.grader/gen_config")
 
-        self.labs = {'lab1': self.gen_samples_lab1,
-                     'lab2': self.gen_samples_lab2,
-                     'lab3': self.gen_samples_lab3,
-                     'lab6': self.gen_samples_lab6,
-                     'lab7': self.gen_samples_lab6}
+        self.labs = {'lab1': self.gen_tests_lab1,
+                     'lab2': self.gen_tests_lab2,
+                     'lab3': self.gen_tests_lab3,
+                     'lab6': self.gen_tests_lab6,
+                     'lab7': self.gen_tests_lab6}
 
         self.args = {"lab1": config.getint("lab1", "sample_length"),
                      "lab2": [config.getint("lab2", "sample_length"),
@@ -33,10 +33,10 @@ class Generator:
                      "lab6": lab6.func,
                      "lab7": lab7.func}
 
-        if number_of_samples is None:
-            self.number_of_samples = config.getint("common", "number_of_samples")
+        if number_of_tests is None:
+            self.number_of_tests = config.getint("common", "number_of_tests")
         else:
-            self.number_of_samples = number_of_samples
+            self.number_of_tests = number_of_tests
 
         if sample_length is not None:
             self.args["lab1"] = sample_length
@@ -59,38 +59,38 @@ class Generator:
     def gen_output_lab_6(function, start, stop, num_of_steps):
         return util.calculate_integral(function, start, stop, num_of_steps)
 
-    def gen_samples(self, lab):
+    def gen_tests(self, lab):
         try:
             return self.labs[lab](self.args[lab])
         except TypeError:
             return self.labs[lab](*self.args[lab])
 
-    def gen_samples_lab1(self, sample_length):
+    def gen_tests_lab1(self, sample_length):
         in_out = []
-        for i in range(self.number_of_samples):
+        for i in range(self.number_of_tests):
             random_string = util.get_random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string], 'output': self.gen_output_lab_1(random_string)})
         return in_out
 
-    def gen_samples_lab2(self, sample_length, change_from, change_to):
+    def gen_tests_lab2(self, sample_length, change_from, change_to):
         in_out = []
-        for i in range(self.number_of_samples):
+        for i in range(self.number_of_tests):
             random_string = util.get_random_string(sample_length, upper=True, lower=True, digits=True)
             in_out.append({'input': [random_string, change_from, change_to],
                            'output': self.gen_output_lab_2(random_string, change_from, change_to)})
         return in_out
 
-    def gen_samples_lab3(self, bitness, op):
+    def gen_tests_lab3(self, bitness, op):
         in_out = []
-        for i in range(self.number_of_samples):
+        for i in range(self.number_of_tests):
             num_a = random.randint(0, 2 ** (bitness - 1))
             num_b = random.randint(0, 2 ** (bitness - 1))
             in_out.append({'input': [hex(num_a), hex(num_b)], 'output': self.gen_output_lab_3(num_a, num_b, op)})
         return in_out
 
-    def gen_samples_lab6(self, function):
+    def gen_tests_lab6(self, function):
         in_out = []
-        for i in range(self.number_of_samples):
+        for i in range(self.number_of_tests):
             start = random.randint(1, 100)
             stop = random.randint(start + 1, 200)
             num_of_steps = 10000

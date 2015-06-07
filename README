@@ -1,0 +1,7 @@
+Grader - program do automatycznego budowania i testowania programow studenckich.
+Aplikacja stworzona na potrzeby projektu z Architektury Komputerow 2.
+
+Plik install.sh spowoduje utworzenie w katalogu domowym uzytkownika folderu z domyslna konfiguracja.
+Plik gen_config zawiera dane potrzebne do skonfigurowania generatora testow.
+Plik mail_config zawiera dane potrzebne do zalogowania i wysylania e-maili. Domyslne prawa dostepu: 600.
+Pliki lab6_function.py oraz lab7_function.py zawieraja funkcje, z ktorych liczona jest calka w tych laboratoriach.
