@@ -5,7 +5,7 @@ import re
 import subprocess as sub
 
 from grader.generator import Generator
-
+from grader.utilities import calc_relative_error
 
 class Grader:
     def __init__(self, root_dir, labs, students_to_grade=[]):
@@ -146,15 +146,4 @@ class Grader:
         server.sendmail(FROM, TO, "uszanowanko")
         server.quit()
 
-
-def calc_relative_error(model, actual):
-    import math
-    try:
-        return math.fabs(model - float(actual)) / model
-    except ValueError as e:
-        correct_letters = 0
-        for i in range(0, len(model)):
-            if model[i] == actual[i]:
-                correct_letters += 1
-        return 1 - correct_letters / len(model)
 

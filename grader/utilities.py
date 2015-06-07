@@ -3,6 +3,7 @@ __author__ = 'dec'
 import random
 import string
 
+
 def calculate_integral(function, start, stop, num_of_steps):
     result = 0.0
     step = (stop - start) / num_of_steps
@@ -29,3 +30,15 @@ def frange(start, stop, step):
     while start <= stop:
         yield start
         start += step
+
+def calc_relative_error(model, actual):
+    import math
+    try:
+        return math.fabs(model - float(actual)) / model
+    except ValueError as e:
+        correct_letters = 0
+        for i in range(0, len(model)):
+            if model[i] == actual[i]:
+                correct_letters += 1
+        return 1 - correct_letters / len(model)
+

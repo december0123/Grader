@@ -8,6 +8,9 @@ import unittest
 from grader.grader import Grader
 from grader.generator import Generator
 
+from grader.utilities import calc_relative_error
+
+
 class TestGenerator(unittest.TestCase):
     def setUp(self):
         self.num_of_samples = 7
@@ -55,20 +58,21 @@ class TestGenerator(unittest.TestCase):
         self.assertEqual(len(in_out), self.num_of_samples)
         for test in in_out:
             self.assertEqual(int(test['output'], 16),
-                             eval(str(int(test['input'][0], 16)) + op + str((int(test['input'][1], 16)))))
+                             eval(str(int(test['input'][0], 16)) + op + str(int(test['input'][1], 16))))
 
     def test_lab_6_gen_output_for_given_input(self):
         start = 1
-        stop = 3
-        num_of_steps = 10000
-        result = 8.6666
+        stop = 15
+        num_of_steps = 100
+        result = 112
+        acceptable_error = 0.01
 
         def func(x):
-            return x ** 2
+            return x
 
-        self.assertAlmostEqual(result,
-                               Generator.gen_output_lab_6(function=func, start=start, stop=stop,
-                                                          num_of_steps=num_of_steps), places=2)
+        self.assertLessEqual(
+            calc_relative_error(result, Generator.gen_output_lab_6(function=func, start=start, stop=stop,
+                                                                   num_of_steps=num_of_steps)), acceptable_error)
 
 
 class TestGrader(unittest.TestCase):
@@ -91,12 +95,8 @@ class TestGrader(unittest.TestCase):
         self.assertFalse(self.grader.grade_lab(self.bad_student_dir, self.lab))
         self.assertFalse(self.grader.grade_lab(self.nonexistent_student_dir, self.lab))
 
-    def test_grade_student_lab(self):
-        passed = self.grader.grade_lab(self.good_student_dir, self.lab)
-        self.assertTrue(passed)
-        passed = self.grader.grade_lab(self.bad_student_dir, self.lab)
-        self.assertFalse(passed)
-
+    def test_report_file_is_created(self):
+        self.grader.grade_lab(self.good_student_dir, self.lab)
         report_file = os.path.join(self.root_dir, self.good_student_dir, self.lab, "Report.txt")
         self.assertTrue(os.path.isfile(report_file))
 
