@@ -51,7 +51,7 @@ class Grader:
                             try:
                                 self.send_mail(self.username, student_dir, "Oceniono zadanie",
                                                "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab +
-                                               "\nLiczba punktow: " + str(points))
+                                               "\nLiczba punktow: " + str(points) + " / 5.0")
                             except Exception as e:
                                 print("Wystapil blad podczas wysylania maila!")
                                 print(e)
