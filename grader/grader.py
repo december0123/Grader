@@ -3,6 +3,9 @@ import datetime
 import os
 import re
 import subprocess as sub
+import sys
+
+sys.path.append('grader')
 
 from grader.generator import Generator
 from grader.utilities import calc_relative_error
