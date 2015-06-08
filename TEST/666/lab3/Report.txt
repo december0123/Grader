@@ -1,73 +1,73 @@
-*** 08.06.2015 08:30:19 ***
+*** 08.06.2015 08:33:02 ***
 *** Student: 666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab3'
 make: 'lab3' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab3'
 
-*** 08.06.2015 08:30:19 ***
+*** 08.06.2015 08:33:02 ***
 *** Zaczynam testowanie projektu... *** 
 
-Wejscie: ['0x2eadcaf8267cae91', '0x1618b95ee1d38cd5']
-Spodziewane wyjscie: 0x44c6845708503b66 BLAD
-Otrzymane wyjscie: 0x2eadcaf8267cae91
+Wejscie: ['0x591dbb8f4f368d21', '0x261ecad9fa852182']
+Spodziewane wyjscie: 0x7f3c866949bbaea3 BLAD
+Otrzymane wyjscie: 0x591dbb8f4f368d21
 
-Wejscie: ['0x2a4c5cedaaa51fb5', '0x79a2cd9dd81e465b']
-Spodziewane wyjscie: 0xa3ef2a8b82c36610 BLAD
-Otrzymane wyjscie: 0x2a4c5cedaaa51fb5
+Wejscie: ['0x7a033261cece3ea5', '0x4b0f88aa396acd3e']
+Spodziewane wyjscie: 0xc512bb0c08390be3 BLAD
+Otrzymane wyjscie: 0x7a033261cece3ea5
 
-Wejscie: ['0x49f29571ef8cd39', '0x6060ae5c724d3060']
-Spodziewane wyjscie: 0x64ffd7b39145fd99 BLAD
-Otrzymane wyjscie: 0x49f29571ef8cd39
+Wejscie: ['0x55f93b66ba533976', '0x5526a0e295af0864']
+Spodziewane wyjscie: 0xab1fdc49500241da BLAD
+Otrzymane wyjscie: 0x55f93b66ba533976
 
-Wejscie: ['0x4213468fe21c3940', '0x4bb320b0f713b6ae']
-Spodziewane wyjscie: 0x8dc66740d92fefee BLAD
-Otrzymane wyjscie: 0x4213468fe21c3940
+Wejscie: ['0x4088e2129a77f64', '0x612789c51d4e3838']
+Spodziewane wyjscie: 0x653017e646f5b79c BLAD
+Otrzymane wyjscie: 0x4088e2129a77f64
 
-Wejscie: ['0xdba013831c4396c', '0x39bbcd8cbcc6e1ef']
-Spodziewane wyjscie: 0x4775cec4ee8b1b5b BLAD
-Otrzymane wyjscie: 0xdba013831c4396c
+Wejscie: ['0x6945fcd03afdeba4', '0x6f92e29567942ce3']
+Spodziewane wyjscie: 0xd8d8df65a2921887 BLAD
+Otrzymane wyjscie: 0x6945fcd03afdeba4
 
-Wejscie: ['0x6ac2c023974f0c72', '0x65f5b9a46949fdbf']
-Spodziewane wyjscie: 0xd0b879c800990a31 BLAD
-Otrzymane wyjscie: 0x6ac2c023974f0c72
+Wejscie: ['0x7928b55f4ae8473f', '0x65de54c8027c3df3']
+Spodziewane wyjscie: 0xdf070a274d648532 BLAD
+Otrzymane wyjscie: 0x7928b55f4ae8473f
 
-Wejscie: ['0x28c97d2d8595f620', '0x1068813110a74e43']
-Spodziewane wyjscie: 0x3931fe5e963d4463 BLAD
-Otrzymane wyjscie: 0x28c97d2d8595f620
+Wejscie: ['0x512c228d155abf36', '0x308b34a2c3b04007']
+Spodziewane wyjscie: 0x81b7572fd90aff3d BLAD
+Otrzymane wyjscie: 0x512c228d155abf36
 
-Wejscie: ['0x50c70cfb4a78b8de', '0x73631034d02dd413']
-Spodziewane wyjscie: 0xc42a1d301aa68cf1 BLAD
-Otrzymane wyjscie: 0x50c70cfb4a78b8de
+Wejscie: ['0x3f9e4f61a559ece5', '0x439126ba63e13874']
+Spodziewane wyjscie: 0x832f761c093b2559 BLAD
+Otrzymane wyjscie: 0x3f9e4f61a559ece5
 
-Wejscie: ['0x4502e452d8c841ff', '0x48eab0662789ae7a']
-Spodziewane wyjscie: 0x8ded94b90051f079 BLAD
-Otrzymane wyjscie: 0x4502e452d8c841ff
+Wejscie: ['0x1d0348a372a49257', '0x365dc3040357abbb']
+Spodziewane wyjscie: 0x53610ba775fc3e12 BLAD
+Otrzymane wyjscie: 0x1d0348a372a49257
 
-Wejscie: ['0x1dba7ffc8244f2b', '0x29755a19428f1639']
-Spodziewane wyjscie: 0x2b5102190ab36564 BLAD
-Otrzymane wyjscie: 0x1dba7ffc8244f2b
+Wejscie: ['0x69e9f56e9de24263', '0x199cb223d9fe07fd']
+Spodziewane wyjscie: 0x8386a79277e04a60 BLAD
+Otrzymane wyjscie: 0x69e9f56e9de24263
 
-Wejscie: ['0x508bf7a2a144c8a6', '0xff145f3e104e3a8']
-Spodziewane wyjscie: 0x607d3d968249ac4e BLAD
-Otrzymane wyjscie: 0x508bf7a2a144c8a6
+Wejscie: ['0x316b68d90b4debca', '0x1139a78d7fff7429']
+Spodziewane wyjscie: 0x42a510668b4d5ff3 BLAD
+Otrzymane wyjscie: 0x316b68d90b4debca
 
-Wejscie: ['0x474534503d7436df', '0x5750068835c525c4']
-Spodziewane wyjscie: 0x9e953ad873395ca3 BLAD
-Otrzymane wyjscie: 0x474534503d7436df
+Wejscie: ['0x70ae7869059e7da6', '0x51ec72cbeb80f3fe']
+Spodziewane wyjscie: 0xc29aeb34f11f71a4 BLAD
+Otrzymane wyjscie: 0x70ae7869059e7da6
 
-Wejscie: ['0x488f2a76e9220385', '0x4cd2588b71fb64eb']
-Spodziewane wyjscie: 0x956183025b1d6870 BLAD
-Otrzymane wyjscie: 0x488f2a76e9220385
+Wejscie: ['0x274ba25af2281839', '0x198860b0a67580b8']
+Spodziewane wyjscie: 0x40d4030b989d98f1 BLAD
+Otrzymane wyjscie: 0x274ba25af2281839
 
-Wejscie: ['0x2576d718a0f61256', '0x2ee3726316538d2f']
-Spodziewane wyjscie: 0x545a497bb7499f85 BLAD
-Otrzymane wyjscie: 0x2576d718a0f61256
+Wejscie: ['0x52e09d67a204d882', '0x3caf092a6bd9873c']
+Spodziewane wyjscie: 0x8f8fa6920dde5fbe BLAD
+Otrzymane wyjscie: 0x52e09d67a204d882
 
-Wejscie: ['0x4ef7a340318075cf', '0x61d230c1346df8f2']
-Spodziewane wyjscie: 0xb0c9d40165ee6ec1 BLAD
-Otrzymane wyjscie: 0x4ef7a340318075cf
+Wejscie: ['0x7cfe581e179f036d', '0x3040cd8b085af4fa']
+Spodziewane wyjscie: 0xad3f25a91ff9f867 BLAD
+Otrzymane wyjscie: 0x7cfe581e179f036d
 
-*** 08.06.2015 08:30:19 ***
+*** 08.06.2015 08:33:02 ***
 *** Zdobyte punkty ***
 0.5 / 5.0
