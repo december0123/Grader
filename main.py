@@ -23,7 +23,7 @@ def get_students_from_csv(csv_file):
     for row in file:
         if len(row) < 2 or '_' not in row[1]:
             continue
-        students.append(row[1][4:])
+        students.append("s"+row[1][4:])
     return students
 
 
