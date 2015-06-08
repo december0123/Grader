@@ -47,8 +47,8 @@ class Grader:
                         if self.send_mails:
                             try:
                                 self.send_mail(self.username, student_dir, "Oceniono zadanie",
-                                           "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab + "\nLiczba punktow: " + str(
-                                               points))
+                                               "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab +
+                                               "\nLiczba punktow: " + str(points))
                             except Exception as e:
                                 print("Wystapil blad podczas wysylania maila!")
                                 print(e)
@@ -117,7 +117,8 @@ class Grader:
                             report.write(line + " BLAD\n")
                             report.write("Otrzymane wyjscie: " + str(output) + "\n")
                     except:
-                        return 0.5
+                        report.write(line + " BLAD\n")
+                        report.write("Otrzymane wyjscie: " + str(output) + "\n")
 
                 else:
                     # such regexp
@@ -127,26 +128,28 @@ class Grader:
                     m = re.match(regexp, output)
                     try:
                         error = calc_relative_error(test['output'], m.group(2))
+                        if error <= self.acceptable_error:
+                            report.write(line + " OK\n")
+                            passed_tests += 0.5
+                        else:
+                            report.write(line + " BLAD\n")
+                            report.write("Otrzymane wyjscie: " + str(output) + "\n")
+                        cycles = float(m.group(4))
+                        if cycles <= 10e6:
+                            passed_tests += 0.5
+                            report.write("+0.5 pkt za liczbe cykli w granicy 10e6.\n")
+                        elif cycles <= 10e9:
+                            passed_tests += 0.3
+                            report.write("+0.3 pkt za liczbe cykli w granicy 10e9.\n")
+                        elif cycles <= 10e12:
+                            passed_tests += 0.1
+                            report.write("+0.1 pkt za liczbe cykli w granicy 10e12.\n")
+                        else:
+                            report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
                     except:
-                        return 0.5
-                    if error <= self.acceptable_error:
-                        report.write(line + " OK\n")
-                        passed_tests += 0.5
-                    else:
                         report.write(line + " BLAD\n")
                         report.write("Otrzymane wyjscie: " + str(output) + "\n")
-                    cycles = float(m.group(4))
-                    if cycles <= 10e6:
-                        passed_tests += 0.5
-                        report.write("+0.5 pkt za liczbe cykli w granicy 10e6.\n")
-                    elif cycles <= 10e9:
-                        passed_tests += 0.3
-                        report.write("+0.3 pkt za liczbe cykli w granicy 10e9.\n")
-                    elif cycles <= 10e12:
-                        passed_tests += 0.1
-                        report.write("+0.1 pkt za liczbe cykli w granicy 10e12.\n")
-                    else:
-                        report.write("0 pkt za liczbe cykli przekraczajaca 10e12.\n")
+
             points = 4.5 * (passed_tests / len(tests)) + 0.5  # + 0.5 for successful build
         return points
 

@@ -1,13 +1,73 @@
-*** 08.06.2015 08:25:30 ***
+*** 08.06.2015 08:30:19 ***
 *** Student: 666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab7'
 make: 'lab7' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab7'
 
-*** 08.06.2015 08:25:30 ***
+*** 08.06.2015 08:30:19 ***
 *** Zaczynam testowanie projektu... *** 
 
-*** 08.06.2015 08:25:30 ***
+Wejscie: ['73', '94', '10000']
+Spodziewane wyjscie: 147185.317665 BLAD
+Otrzymane wyjscie: 73
+
+Wejscie: ['86', '87', '10000']
+Spodziewane wyjscie: 7482.32468333 BLAD
+Otrzymane wyjscie: 86
+
+Wejscie: ['88', '169', '10000']
+Spodziewane wyjscie: 1381694.69204 BLAD
+Otrzymane wyjscie: 88
+
+Wejscie: ['21', '160', '10000']
+Spodziewane wyjscie: 1362071.48276 BLAD
+Otrzymane wyjscie: 21
+
+Wejscie: ['16', '188', '10000']
+Spodziewane wyjscie: 2213223.58501 BLAD
+Otrzymane wyjscie: 16
+
+Wejscie: ['16', '132', '10000']
+Spodziewane wyjscie: 765191.094868 BLAD
+Otrzymane wyjscie: 16
+
+Wejscie: ['28', '169', '10000']
+Spodziewane wyjscie: 1601423.17682 BLAD
+Otrzymane wyjscie: 28
+
+Wejscie: ['77', '109', '10000']
+Spodziewane wyjscie: 279489.143521 BLAD
+Otrzymane wyjscie: 77
+
+Wejscie: ['87', '174', '10000']
+Spodziewane wyjscie: 1536408.22565 BLAD
+Otrzymane wyjscie: 87
+
+Wejscie: ['96', '147', '10000']
+Spodziewane wyjscie: 763897.398071 BLAD
+Otrzymane wyjscie: 96
+
+Wejscie: ['5', '155', '10000']
+Spodziewane wyjscie: 1241070.00562 BLAD
+Otrzymane wyjscie: 5
+
+Wejscie: ['21', '92', '10000']
+Spodziewane wyjscie: 256447.185613 BLAD
+Otrzymane wyjscie: 21
+
+Wejscie: ['95', '144', '10000']
+Spodziewane wyjscie: 709507.641579 BLAD
+Otrzymane wyjscie: 95
+
+Wejscie: ['90', '120', '10000']
+Spodziewane wyjscie: 332990.550045 BLAD
+Otrzymane wyjscie: 90
+
+Wejscie: ['81', '161', '10000']
+Spodziewane wyjscie: 1213869.22752 BLAD
+Otrzymane wyjscie: 81
+
+*** 08.06.2015 08:30:19 ***
 *** Zdobyte punkty ***
 0.5 / 5.0

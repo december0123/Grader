@@ -1,58 +1,58 @@
-*** 08.06.2015 08:25:30 ***
+*** 08.06.2015 08:30:19 ***
 *** Student: 666 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/666/lab1'
 
-*** 08.06.2015 08:25:30 ***
+*** 08.06.2015 08:30:19 ***
 *** Zaczynam testowanie projektu... *** 
 
-Wejscie: ['V2iHL1JEFC']
-Spodziewane wyjscie: V2iHL1JEFC OK
+Wejscie: ['rQCbPX6GnU']
+Spodziewane wyjscie: rQCbPX6GnU OK
 
-Wejscie: ['5ZOJ7l9MUq']
-Spodziewane wyjscie: 5ZOJ7l9MUq OK
+Wejscie: ['dLYsULptiG']
+Spodziewane wyjscie: dLYsULptiG OK
 
-Wejscie: ['nWw0iV4BYW']
-Spodziewane wyjscie: nWw0iV4BYW OK
+Wejscie: ['Vh8GXHrfA1']
+Spodziewane wyjscie: Vh8GXHrfA1 OK
 
-Wejscie: ['3CW1p22or9']
-Spodziewane wyjscie: 3CW1p22or9 OK
+Wejscie: ['99D760ebor']
+Spodziewane wyjscie: 99D760ebor OK
 
-Wejscie: ['Gwoc92Pli7']
-Spodziewane wyjscie: Gwoc92Pli7 OK
+Wejscie: ['5UgPKdXSon']
+Spodziewane wyjscie: 5UgPKdXSon OK
 
-Wejscie: ['GsnXi39mS0']
-Spodziewane wyjscie: GsnXi39mS0 OK
+Wejscie: ['VP3HYsi5Kg']
+Spodziewane wyjscie: VP3HYsi5Kg OK
 
-Wejscie: ['yA8BE6ryKK']
-Spodziewane wyjscie: yA8BE6ryKK OK
+Wejscie: ['ZyUVecbnu2']
+Spodziewane wyjscie: ZyUVecbnu2 OK
 
-Wejscie: ['EX6V281MlZ']
-Spodziewane wyjscie: EX6V281MlZ OK
+Wejscie: ['TIj4laxTqW']
+Spodziewane wyjscie: TIj4laxTqW OK
 
-Wejscie: ['HYgTcPy7hp']
-Spodziewane wyjscie: HYgTcPy7hp OK
+Wejscie: ['tAi4R4PhKH']
+Spodziewane wyjscie: tAi4R4PhKH OK
 
-Wejscie: ['54yifmNqMp']
-Spodziewane wyjscie: 54yifmNqMp OK
+Wejscie: ['bmTnPCAlGO']
+Spodziewane wyjscie: bmTnPCAlGO OK
 
-Wejscie: ['6ur41Gw2zw']
-Spodziewane wyjscie: 6ur41Gw2zw OK
+Wejscie: ['lGi4tv5EbO']
+Spodziewane wyjscie: lGi4tv5EbO OK
 
-Wejscie: ['VgY2jWuZOW']
-Spodziewane wyjscie: VgY2jWuZOW OK
+Wejscie: ['TMgm6DCqmV']
+Spodziewane wyjscie: TMgm6DCqmV OK
 
-Wejscie: ['4mUW1Af5gJ']
-Spodziewane wyjscie: 4mUW1Af5gJ OK
+Wejscie: ['wDiqYmANRG']
+Spodziewane wyjscie: wDiqYmANRG OK
 
-Wejscie: ['LcmV4Qaa11']
-Spodziewane wyjscie: LcmV4Qaa11 OK
+Wejscie: ['9nryoKItec']
+Spodziewane wyjscie: 9nryoKItec OK
 
-Wejscie: ['YKjXVCCaeY']
-Spodziewane wyjscie: YKjXVCCaeY OK
+Wejscie: ['7egEDk1D1T']
+Spodziewane wyjscie: 7egEDk1D1T OK
 
-*** 08.06.2015 08:25:30 ***
+*** 08.06.2015 08:30:19 ***
 *** Zdobyte punkty ***
 5.0 / 5.0
