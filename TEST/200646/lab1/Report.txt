@@ -1,58 +1,58 @@
-*** 08.06.2015 08:50:46 ***
+*** 08.06.2015 08:53:10 ***
 *** Student: 200646 ***
 *** Zaczynam budowanie projektu... *** 
 make: Wejście do katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 make: 'lab1' jest aktualne.
 make: Opuszczenie katalogu '/mnt/Dane/studia/sem6/ak2/Grader/TEST/200646/lab1'
 
-*** 08.06.2015 08:50:46 ***
+*** 08.06.2015 08:53:10 ***
 *** Zaczynam testowanie projektu... *** 
 
-Wejscie: ['yDmaC0Xw5N']
-Spodziewane wyjscie: yDmaC0Xw5N OK
+Wejscie: ['Q4jVsEA3hK']
+Spodziewane wyjscie: Q4jVsEA3hK OK
 
-Wejscie: ['jmlX9Fk6uI']
-Spodziewane wyjscie: jmlX9Fk6uI OK
+Wejscie: ['fDr7TVT20P']
+Spodziewane wyjscie: fDr7TVT20P OK
 
-Wejscie: ['V3NqfUKLAD']
-Spodziewane wyjscie: V3NqfUKLAD OK
+Wejscie: ['wby3yDH4cA']
+Spodziewane wyjscie: wby3yDH4cA OK
 
-Wejscie: ['LvACmecJdH']
-Spodziewane wyjscie: LvACmecJdH OK
+Wejscie: ['WvUuP77o0l']
+Spodziewane wyjscie: WvUuP77o0l OK
 
-Wejscie: ['8yqz9UGRFu']
-Spodziewane wyjscie: 8yqz9UGRFu OK
+Wejscie: ['deHXi5bsLt']
+Spodziewane wyjscie: deHXi5bsLt OK
 
-Wejscie: ['uxbNjbd8A2']
-Spodziewane wyjscie: uxbNjbd8A2 OK
+Wejscie: ['O2AOCjii2o']
+Spodziewane wyjscie: O2AOCjii2o OK
 
-Wejscie: ['Zn7Tr3YIle']
-Spodziewane wyjscie: Zn7Tr3YIle OK
+Wejscie: ['RlG9xT5pg5']
+Spodziewane wyjscie: RlG9xT5pg5 OK
 
-Wejscie: ['3bGpoojkFN']
-Spodziewane wyjscie: 3bGpoojkFN OK
+Wejscie: ['tsUxYVMjFL']
+Spodziewane wyjscie: tsUxYVMjFL OK
 
-Wejscie: ['GWbEHkU6D9']
-Spodziewane wyjscie: GWbEHkU6D9 OK
+Wejscie: ['rSNIECsESw']
+Spodziewane wyjscie: rSNIECsESw OK
 
-Wejscie: ['WIMO2aDgO1']
-Spodziewane wyjscie: WIMO2aDgO1 OK
+Wejscie: ['Mw3FIdxHOg']
+Spodziewane wyjscie: Mw3FIdxHOg OK
 
-Wejscie: ['SUeGyiIFJH']
-Spodziewane wyjscie: SUeGyiIFJH OK
+Wejscie: ['Wd7ldgMWa9']
+Spodziewane wyjscie: Wd7ldgMWa9 OK
 
-Wejscie: ['MYcRlyLeKE']
-Spodziewane wyjscie: MYcRlyLeKE OK
+Wejscie: ['eADdpOS35t']
+Spodziewane wyjscie: eADdpOS35t OK
 
-Wejscie: ['nwdY8K45qZ']
-Spodziewane wyjscie: nwdY8K45qZ OK
+Wejscie: ['QmeY7vfm03']
+Spodziewane wyjscie: QmeY7vfm03 OK
 
-Wejscie: ['c2ipoShKyq']
-Spodziewane wyjscie: c2ipoShKyq OK
+Wejscie: ['9qHLK1yLPZ']
+Spodziewane wyjscie: 9qHLK1yLPZ OK
 
-Wejscie: ['kQjlQlWNNa']
-Spodziewane wyjscie: kQjlQlWNNa OK
+Wejscie: ['uCcJ4qBW0M']
+Spodziewane wyjscie: uCcJ4qBW0M OK
 
-*** 08.06.2015 08:50:46 ***
+*** 08.06.2015 08:53:10 ***
 *** Zdobyte punkty ***
 5.0 / 5.0

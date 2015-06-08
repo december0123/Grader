@@ -7,7 +7,6 @@ import unittest
 
 from grader.grader import Grader
 from grader.generator import Generator
-
 from grader.utilities import calc_relative_error
 
 
