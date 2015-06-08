@@ -35,6 +35,8 @@ def main():
                       metavar="csv_file")
     parser.add_option("-S", "--student", action="append", dest="students", help="Student to grade.",
                       metavar="student")
+    parser.add_option("-M", "--mail", action="store_true", dest="mail", default=False, help="Send emails? Boolean.",
+                      metavar="Boolean")
 
     (options, args) = parser.parse_args()
 
@@ -47,7 +49,7 @@ def main():
         students_to_grade = get_students_from_csv(options.csv_file)
     if options.students is not None:
         students_to_grade.extend(options.students)
-    grader = Grader(options.root_dir, options.labs, students_to_grade)
+    grader = Grader(options.root_dir, options.labs, students_to_grade, options.mail)
 
     grader.launch()
 

@@ -9,7 +9,7 @@ from grader.utilities import calc_relative_error
 
 
 class Grader:
-    def __init__(self, root_dir, labs, students_to_grade=[]):
+    def __init__(self, root_dir, labs, students_to_grade=[], mail=False):
         config = configparser.RawConfigParser()
         config.read(os.path.expanduser("~") + "/.grader/mail_config")
         self.server = config.get("mail", "server")
@@ -22,6 +22,7 @@ class Grader:
         self.cur_dir = os.getcwd()
         self.students_to_grade = students_to_grade
         self.generator = Generator()
+        self.send_mails = mail
 
     @property
     def info(self):
@@ -43,13 +44,14 @@ class Grader:
                                      str(points) + " punktow za " + lab + "\n")
                         print("Ocenilem " + student_dir + " na " +
                               str(points) + " punktow za " + lab + "\n")
-                        try:
-                            self.send_mail(self.username, student_dir, "Oceniono zadanie",
-                                       "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab + "\nLiczba punktow: " + str(
-                                           points))
-                        except Exception as e:
-                            print("Wystapil blad podczas wysylania maila!")
-                            print(e)
+                        if self.send_mails:
+                            try:
+                                self.send_mail(self.username, student_dir, "Oceniono zadanie",
+                                           "Komunikat zostal wygenerowany automatycznie.\nLaboratorium: " + lab + "\nLiczba punktow: " + str(
+                                               points))
+                            except Exception as e:
+                                print("Wystapil blad podczas wysylania maila!")
+                                print(e)
         print("**************************************************************")
         print("Zakonczono ocenianie. Raport zbiorowy znajduje sie w pliku: ")
         print(os.path.join(self.root_dir, "Final_Report.txt"))
