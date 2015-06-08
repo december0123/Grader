@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.1
 import csv
 from optparse import OptionParser
 import os
@@ -16,10 +16,10 @@ def get_students_from_csv(csv_file):
     :return: list of students
     """
 
-    file = csv.reader(open(csv_file), delimiter=';')
+    file = csv.reader(open(csv_file, encoding="latin-1"), delimiter=';')
     students = []
     for row in file:
-        if '_' not in row[1]:
+        if len(row) < 2 or '_' not in row[1]:
             continue
         students.append(row[1][4:])
     return students

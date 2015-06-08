@@ -7,8 +7,8 @@ import sys
 
 sys.path.append('grader')
 
-from grader.generator import Generator
-from grader.utilities import calc_relative_error
+from generator import Generator
+from utilities import calc_relative_error
 
 
 class Grader:
@@ -43,7 +43,7 @@ class Grader:
                         os.path.isdir(os.path.join(self.root_dir, student_dir)):
                     for lab in self.labs:
                         points = self.grade_lab(student_dir, lab)
-                        report.write("Ocenilem " + student_dir + " na " +
+                        report.write("\nOcenilem " + student_dir + " na " +
                                      str(points) + " punktow za " + lab + "\n")
                         print("Ocenilem " + student_dir + " na " +
                               str(points) + " punktow za " + lab + "\n")
