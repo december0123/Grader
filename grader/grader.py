@@ -38,8 +38,9 @@ class Grader:
             report.write("*** " + datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S") + " ***\n")
             report.write("*** Raport zbiorowy *** \n")
             report.flush()
+            regexp = re.compile(r"s?\d+")
             for student_dir in os.listdir(self.root_dir):
-                if (student_dir in self.students_to_grade or not self.students_to_grade) and \
+                if regexp.match(student_dir) and (student_dir in self.students_to_grade or not self.students_to_grade) and \
                         os.path.isdir(os.path.join(self.root_dir, student_dir)):
                     for lab in self.labs:
                         points = self.grade_lab(student_dir, lab)
