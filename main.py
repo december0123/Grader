@@ -15,8 +15,10 @@ def get_students_from_csv(csv_file):
     :param options:
     :return: list of students
     """
-
-    file = csv.reader(open(csv_file, encoding="latin-1"), delimiter=';')
+    try:
+        file = csv.reader(open(csv_file, encoding="ISO-8859-2"), delimiter=';')
+    except:
+        file = csv.reader(open(csv_file, encoding="latin-1"), delimiter=';')
     students = []
     for row in file:
         if len(row) < 2 or '_' not in row[1]:
